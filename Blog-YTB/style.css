@@ -14,6 +14,7 @@
     --seccond-color: #fd8f44;
     --text-color: #172317;
     --bg-color: #fff;
+    --third-color: #3c3a39;
 }
 
 a {
@@ -28,77 +29,176 @@ img {
     width: 100%;
 }
 
-section {
-    padding: 3rem 0 2rem;
-}
-
-::selection {
-    color: var(--bg-color);
-    background: var(--seccond-color);
-}
-.container {
-    max-width: 1068px;
-    margin: auto;
-    width: 100%;
-}
-
-.nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 18px 0;
-
-}
-/* Header */
 header {
+    position: relative;
+}
+section {
+    margin: 1.5rem 3%;
+    z-index: 100;
+    display: block;
+}
+
+
+/* Header */
+#heading {
+    background: #554f51;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 7vh;
+    display: flex;
     position: fixed;
+    justify-content: space-between;
+    align-items: center;
     top: 0;
+    right: 0;
     left: 0;
     z-index: 200;
-    width: 100%;
 }
+
 /* Logo */
-.logo {
+#heading .logo {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--bg-color);
+    line-height: 2vh;
+    margin-left: 1rem;
 }
-.logo span{
+#heading .logo span{
     color: var(--seccond-color);
 }
+
+/* Navigation */
+#heading a{
+    color: white;
+    align-items: center;
+    padding-left: 1rem;
+}
+/* Icon cart */
+#heading .right-heading {
+    display: flex;
+    align-items: center;
+}
+#heading .cart-icon {
+    margin-right: 1.2rem;
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 60px;
+    padding: 0.5rem;
+}
+#heading .icon-cart:hover {
+    color: red;
+    transform: 0.3s linear;
+}
+
 /* Login BTN */
-.login {
+#heading .login {
     padding: 8px 14px;
     text-transform: uppercase;
     font-weight: 500;
     border-radius: 4px;
     background: var(--seccond-color);
-    color: var(--bg-color)
+    color: var(--bg-color);
+    margin-right: 1rem;
+    line-height: 60px;
 }
-.login:hover {
+#heading .login:hover {
     background: hsl(24, 989%, 58%);
     transition: 0.3s;
 }
-/* HOME */
-.home {
+
+/* Cart-items */
+#cart-items {
+    display: none;
+    width: 15%;
+    height: 75vh;
+    background-color: #ccc;
+    position: fixed;
+    z-index: 150;
+    right: 0;
+    top: 0;
+}
+
+/* HOME Banner*/
+#home {
+    margin-top: 60px;
     width: 100%;
-    min-height: 440px;
-    background: var(--container-color);
+    min-height: 70vh;
+    background: var(--third-color);
+    background: url('./img/home/banner2.jpg') no-repeat center;
+    background-size: cover;
+    background-clip: border-box;
     display: grid;
     justify-content: center;
     align-items: center;
+    text-align: left;
+    position: relative;
+
 }
-.home-text {
+#home .home-text {
     color: var(--bg-color);
     text-align: center;
+    max-width: 600px;
+    max-height: 280px;
 }
-.home-title {
-    font-size: 3.5rem;
+#home .home-title {
+    font-size: 2rem;
+    text-transform: uppercase;
 }
-.home-subtitle {
+#home .home-subtitle {
     font-size: 1rem;
     font-weight: 400;
+    text-align: left;
+    font-style: italic;
+    opacity: 0.5;
 }
+
+/* About Us */
+.about-title {
+    text-align: center;
+    text-transform: uppercase;
+    color: brown;
+    padding: 1rem;
+    font-size: 1.5rem;
+   
+}
+.about-info {
+    display: flex;
+    border: 1px solid;
+    border-radius: 4px;
+}
+.column-img {
+    padding: 1rem 0 1rem 1rem;
+    flex-grow: 1;
+    width: 100%;
+}
+.column-about {
+    display: block;
+    padding: 1rem;
+    display: block;
+    margin: auto;
+    line-height: 1.4;
+    flex-grow: 0;
+    max-width: 800px;
+    max-height: 600px;    
+}
+.about-heading {
+    padding: 1rem 0;
+    text-transform: uppercase;
+}
+.about-content {
+    padding: 1rem 0;
+}
+.about-button {
+    padding: 10px 20px;
+    color: white;
+    background: red;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
 /* Post Filter */
 .post-filter {
     display: flex;
@@ -118,10 +218,11 @@ header {
     padding: 4px 10px;
     border-radius: 4px;
 }
+
 /* Post */
 .post {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px,auto));
+    grid-template-columns: repeat(3, minmax(280px,auto));
     justify-content: center;
     gap: 1.5rem;
 }
@@ -185,3 +286,131 @@ header {
     border: 2px solid var(--seccond-color);
     background-size: 100%;
 }
+
+/* Hot-items */
+.container-hot-item {
+    margin: 1.5rem 3%;
+}
+.item-title {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(15rem,auto));
+    justify-content: center;
+    gap: 1.5rem;
+    text-align: center;
+    min-height: 300px;
+}
+.box {
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid;
+    border-radius: 4px;
+    display: block;
+    
+}
+.box-img {
+    height: 10rem;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+}
+.box-title-name {
+    padding: 15px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    overflow-wrap: break-word;
+}
+.box span {
+    font-style: italic;
+    font-size: 0.7rem;
+    font-weight: 200;
+    text-decoration: line-through;
+}
+.price {
+    font-weight: 500;
+}
+.btn {
+    font-size: 0.7rem;
+    cursor: pointer;
+    padding: 0.4rem 0.9rem;
+    background-color: #fd8f44;
+    border-radius: 4px;
+    color: white;
+}
+.box-icon{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.box-icon i {
+    padding: 0.4rem;
+    border: 1px solid;
+    border-radius: 4px;
+}
+.box .category {
+    padding-bottom: 0.4rem;
+    font-size: 0.7rem;
+}
+
+/* Reviewer / Rating about US */
+.review-title {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+.container-layout-review {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(15rem,auto));
+    gap: 1.5rem;
+    box-shadow: 0 4px 14px hsl(355deg 25% 15% / 10%);
+    overflow: auto;
+}
+.container-column {
+    padding: 1.5rem;
+}
+.quote-img {
+    width: 2rem;
+    height: 2rem;
+    float: none;
+}
+.container-info {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+.reviewer {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin-right: 0.5rem;
+}
+.reviewer-name {
+    font-weight: 500;
+}
+.container-rating-star {
+    text-align: left;
+    padding: 0.5rem 1rem;
+}
+.category {
+    padding: 0 1rem;
+    margin-bottom: 0.5rem;
+}
+.container-content-review {
+    line-height: 1.4;
+    text-align: left;
+}
+
+
+
+
+
+
+

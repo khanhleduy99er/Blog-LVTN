@@ -16,33 +16,85 @@
     <!-- Header -->
     <header>
         <!-- Nav -->
-        <div class="nav container">
-        <!-- Logo -->
-        <a href="#" class="logo">Du.<span>Khanh</span></a>
-        <!-- Login BTN -->
-        <a href="#" class="login">Login</a>
-    </div>
+        <div id="heading">
+            <!-- Logo -->
+            <a href="#" class="logo">Du.<span>Khanh</span></a>
+            <!-- Navigation -->
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Hot items</a>
+                <a href="#">Blogs</a>
+                <a href="#">Review</a>
+                <a href="#">Contact</a>
+            </nav>
+
+            <div class="right-heading">
+                <div>
+                    <!-- Icon search -->
+                    <i class="cart-icon fa-solid fa-cart-shopping"></i>
+                </div>
+                <div>
+                    <!-- Login BTN -->
+                    <a href="#" class="login">Log in</a>
+                </div>
+            </div>
+            
+        </div>
     </header>
 
-    <!-- HOME -->
-    <section class="home" id="home">
-        <div class="home-text container">
-            <h2 class="home-title">Le Duy Khanh Blog-LVTN</h2>
-            <span class="home-subtitle">Change the text if you want</span>
+    <!-- List cart items -->
+    <div id="cart-items">
+        <div class="item">
+            <span>Items 01</span>
+            <i class="fa-solid fa-xmark"></i>
+
+        </div>
+    </div>
+
+    <!-- HOME Banner-->
+    <banner id="home">
+        <div class="home-text">
+            <!-- <img class="home-img" src="./img/home/banner.jpg" alt="Technologies"> -->
+            <h2 class="home-title">Blog cho nguoi truong thanh nha may cu</h2>
+            <span class="home-subtitle">
+                Cau slogan của trang Blogs</span>
+        </div>
+    </banner>
+
+    <!-- About Us -->
+    <section id="about">
+        <div class="about-layout">
+            <h3 class="about-title">About Us</h2>
+            <div class="about-info">
+                <div class="column-img">
+                    <img src="https://i.pinimg.com/564x/b1/45/c7/b145c75f3f9708a3424de9499db0e556.jpg" alt="#">
+                </div>
+
+                <div class="column-about">
+                    <h3 class="about-heading">This is the heading</h3>
+                    <p class="about-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, soluta corporis quod dolore reprehenderit quidem, quia itaque ratione nostrum eum nihil libero et atque, doloribus quaerat nulla adipisci exercitationem eius.
+                    <br> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed esse quo iste nemo impedit, maiores praesentium sunt, alias at porro veritatis, dolorum facilis optio suscipit dicta delectus soluta ullam. Iusto.
+                    </p>
+                    <button class="about-button">View-Us</button>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Post Filter -->
-    <div class="post-filter container">
-        <span class="filter-item active-filter" data-filter="all
-        ">ALL</span>
-        <span class="filter-item" data-filter="design
-        ">Designs</span>
-        <span class="filter-item" data-filter="tech
-        ">Technologies</span>
-        <span class="filter-item" data-filter="mobile
-        ">Mobiles</span>
-    </div>
+         <!-- Post Filter -->
+    <section class="section-filter">
+        <div class="post-filter container">
+            <span class="filter-item active-filter" data-filter="all
+            ">ALL</span>
+            <span class="filter-item" data-filter="design
+            ">Designs</span>
+            <span class="filter-item" data-filter="tech
+            ">Technologies</span>
+            <span class="filter-item" data-filter="mobile
+            ">Mobiles</span>
+        </div>
+    </section>
 
     <!-- Post -->
     <section class="post container">
@@ -192,12 +244,121 @@
     </section>
 
 
+    <!-- Hot items -->
+    <section class="container-hot-item">
+        <h3 class="item-title">Hot Items of Us</h3>
+        <div class="box-container">
+            <div class="box">
+                <img class="box-img" src="https://i.pinimg.com/564x/7d/df/2a/7ddf2a93b41449c4c19fcc7a40de8d9d.jpg" alt="girl">
+                <h3 class="box-title-name" >Name of titiitt</h3>
+                <h5 class="category">@Designs</h5>
+                <div class="price">
+                    $ 15.699 <span>20.99</span>
+                </div>
+                <div class="box-icon">
+                    <a href="#" class="btn">Buy items</a>
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="cart-icon fa-solid fa-cart-shopping"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img class="box-img" src="https://i.pinimg.com/564x/7d/df/2a/7ddf2a93b41449c4c19fcc7a40de8d9d.jpg" alt="girl">
+                <h3 class="box-title-name" >Name of titiitt</h3>
+                <h5 class="category">@Technologies</h5>
+                <div class="price">
+                    $ 15.699 <span>20.99</span>
+                </div>
+
+                <div class="box-icon">
+                    <a href="#" class="btn">Buy items</a>
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="cart-icon fa-solid fa-cart-shopping"></i>
+                </div>
+            </div>
+            
+            <div class="box">
+                <img class="box-img" src="https://i.pinimg.com/564x/7d/df/2a/7ddf2a93b41449c4c19fcc7a40de8d9d.jpg" alt="girl">
+                <h3 class="box-title-name" >Name of titiitt</h3>
+                <h5 class="category">@Mobiles</h5>
+                <div class="price">
+                    $ 15.699 <span>20.99</span>
+                </div>
+                <div class="box-icon">
+                    <a href="#" class="btn">Buy items</a>
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="cart-icon fa-solid fa-cart-shopping"></i>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Reviewer / Rating about US -->
+    <section class="review">
+        <h2 class="review-title">Review Us</h2>
+        <div class="container-layout-review">
+            <div class="container-column">
+                <img src="./img/review/quote-img.png" alt="quotes" class="quote-img">
+                <div class="container-info">
+                    <img src="./img/review/reviewer.jpg" alt="" class="reviewer">
+                    <p class="reviewer-name">Johny Deep</p>
+                </div>
+                <div class="container-rating-star">          
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half"></i>
+                </div>
+                <h5 class="category">@Technologies</h5>
+                <p class="container-content-review">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil numquam delectus repellat cumque laborum, culpa inventore maxime, dolore porro, necessitatibus est maiores hic ratione explicabo nulla asperiores facere omnis quam.
+                </p>
+            </div>
+            <div class="container-column">
+                <img src="./img/review/quote-img.png" alt="quotes" class="quote-img">
+                <div class="container-info">
+                    <img src="./img/review/reviewer.jpg" alt="" class="reviewer">
+                    <p class="reviewer-name">Johny Deep</p>
+                </div>
+                <div class="container-rating-star">          
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half"></i>
+                </div>
+                <h5 class="category">@Mobiles</h5>
+                <p class="container-content-review">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil numquam delectus repellat cumque laborum, culpa inventore maxime, dolore porro, necessitatibus est maiores hic ratione explicabo nulla asperiores facere omnis quam.
+                </p>
+            </div>
+            <div class="container-column">
+                <img src="./img/review/quote-img.png" alt="quotes" class="quote-img">
+                <div class="container-info">
+                    <img src="./img/review/reviewer.jpg" alt="" class="reviewer">
+                    <p class="reviewer-name">Johny Deep</p>
+                </div>
+                <div class="container-rating-star">          
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half"></i>
+                </div>
+                <h5 class="category">@Designs</h5>
+                <p class="container-content-review">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil numquam delectus repellat cumque laborum, culpa inventore maxime, dolore porro, necessitatibus est maiores hic ratione explicabo nulla asperiores facere omnis quam.
+                </p>
+            </div>
+        </div>
+    </section>
 
 
 
-
-
-
+    <!-- Link Front Awesome -->
+    <script src="https://kit.fontawesome.com/a714f771f9.js" crossorigin="anonymous"></script>
     <!-- JQuery Link -->
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <!-- Js -->
