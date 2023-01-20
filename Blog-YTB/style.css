@@ -531,12 +531,146 @@ section {
 /* Banner Post-page */
 .banner-img {
     width: 100%;
-    height: 30rem;
+    height: 10rem;
     object-fit: cover;
     border-radius: 4px;
+    z-index: -1;
 }
 
 /* Post content */
 #box-content {
-    padding: 2rem 15rem;
+    padding: 0 15rem;
+    line-height: 1.5;
+    z-index: 100;
+}
+.box-layout-content {
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 14px hsl(355deg 25% 15% / 10%);;
+}
+.box-infor {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    margin-left: 12px;
+}
+.box-infor span {
+    color: #757575;
+    font-weight: 200;
+    text-align: center;
+}
+.box-infor i {
+    color: var(--third-color);
+    font-size: 1rem;
+    text-align: center;
+}
+.box-user {
+    display: block;
+    padding: 0.5rem 0;
+}
+.box-user i{
+    border: 1px solid;
+    padding: 9px 10px;
+    border-radius: 50%;
+}
+.box-user span {
+    color: var(--seccond-color);
+    text-decoration: none;
+}
+.title-post {
+    color: var(--third-color);
+    font-weight: 500;
+    text-align: left;
+    display: block;
+    overflow: hidden;
+    padding: 0.5rem 0;
+}
+.content-img {
+    display: block;
+    max-width: 100%;
+    max-height: 50rem;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.box-content-post {
+    text-align: justify;
+    text-overflow: clip;
+    padding: 0.5rem 0;
+}
+.heading-content-post {
+    color: var(--third-color);
+    font-weight: 600;
+    text-align: left;
+    display: block;
+    overflow: hidden;
+    padding: 0.5rem 0;
+    text-overflow: clip;
+}
+
+.box-price {
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    object-fit: cover;
+    object-position: center;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-radius: 1rem;
+}
+.box-img-price {
+    max-width: 10rem;
+    max-height: 10rem;
+    margin: 1rem;
+    object-fit: cover;
+    object-position: center;
+}
+.box-img-price img {
+    border-radius: 1rem;
+}
+.box-buy-item {
+    margin: 1rem;
+    width: 12rem;
+}
+.box-buy-item span {
+    font-style: italic;
+    font-size: 0.7rem;
+    font-weight: 200;
+    text-decoration: line-through;
+}
+.icon-buys {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+.icon-buys i {
+    padding: 0.4rem;
+    border: 1px solid;
+    border-radius: 4px;
+}
+.container-rating-star {
+    text-align: center;
+    margin-top: 0.5;
+}
+
+.box-footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    align-items: center;
+}
+.box-back-home-btn {
+    padding: 0.5rem 1.5rem;
+    background: var(--seccond-color);
+    border-radius: 5px;
+    color: white;
+}
+.box-back-home-btn a{
+    color: white;
+}
+.container-icon-post-page:hover {
+    color: #fd8f44;
+    transition: 0.3s ease;
 }
