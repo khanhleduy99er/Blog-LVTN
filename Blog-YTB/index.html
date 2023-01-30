@@ -31,26 +31,42 @@
 
             <div class="right-heading">
                 <div>
-                    <!-- Icon search -->
-                    <i class="cart-icon fa-solid fa-cart-shopping"></i>
+                    <!-- Icon shopping -->
+                    <i class="cart-icon fa-solid fa-cart-shopping" id="cart-shopping-icon"></i>
                 </div>
                 <div>
                     <!-- Login BTN -->
                     <a href="./login.html" class="login">Log in</a>
                 </div>
+
+                <!-- List cart items -->
+                <div class="cart-item active">
+                    <h2 class="cart-title">Your Cart</h2>
+                    <div class="cart-content">
+                        <div class="cart-box">
+                            <img src="https://i.pinimg.com/736x/8b/ee/af/8beeafe15422ea45639a5565f69576bd.jpg" alt="items" class="cart-img">
+                            <div class="cart-detail">
+                                <div class="cart-product-title">Input your title</div>
+                                <div class="cart-price">$ 15.99</div>
+                                <input type="number" class="cart-quantify" value="1">
+                            </div>
+                            <!-- Remove items -->
+                            <i class="fa-sharp fa-solid fa-xmark" id="cart-remove"></i>
+                        </div>
+                    </div>
+                    <!-- Total items -->
+                    <div class="total-items">
+                        <div class="total-title">Total</div>
+                        <div class="total-price">$ 0</div>
+                    </div>
+                    <!-- Buy button -->
+                    <button type="button" class="btn-buy-total">Buy Now</button>
+                    <!-- Cart close -->
+                    <i class="fa-solid fa-circle-xmark" id="close-cart-list"></i>
+                </div>
             </div>
-            
         </div>
     </header>
-
-    <!-- List cart items -->
-    <div id="cart-items">
-        <div class="item">
-            <span>Items 01</span>
-            <i class="fa-solid fa-xmark"></i>
-
-        </div>
-    </div>
 
     <!-- HOME Banner-->
     <banner id="home">

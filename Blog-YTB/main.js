@@ -1,26 +1,35 @@
-// Filter Js
-// $(document).ready(function() {
-//     $('.filter-item').click(function(){
-//         const value = $(this).attr('data-filter');
-//         if (value == 'all') {
-//             $('.post-box').show('1000');
-//         } else{
-//             $('.post-box')
-//             .not('.' + value)
-//             .hide('1000');
-//             $('.post-box')
-//             .filter('.' + value)
-//             .show('1000');
-//         }
-//     });
-    // Active  to btn
-//     $('.filter-item').click(function(){
-//         $(this).addClass('active-filter').siblings().removeClass('active-filter');
-//     })
-// });
-// Header Background Change on Scroll
-// let header = document.querySelector('header');
+// Cart List
+let cartIcon = document.querySelector('#cart-shopping-icon');
+let cart = document.querySelector('.cart-item');
+let closeCart = document.querySelector('#close-cart-list');
 
-// window.addEventListener('scroll', () => {
-//     header.classList.toggle('shadow', window.scrollY > 0);
-// });
+// Onpen CartList
+cartIcon.onclick = () => {
+    cart.classList.add("active");
+};
+// Close Cart
+closeCart.onclick = () => {
+    cart.classList.remove("active");
+};
+
+// Cart Working Js
+if (document.readyState == "loading") {
+    document.addEventListener("DOMContentLoaded", ready);
+}else {
+    ready();
+}
+// Making Function
+function ready(){
+    // Remove function
+    var removeCartButtons = document.getElementsByClassName('cart-remove');
+    console.log(removeCartButtons);
+
+    for (var i = 0; i < removeCartButtons.length; i++) {
+        var button = removeCartButtons[i];
+        button.addEventListener('click', removeCartItem);
+    }
+}
+function removeCartItem(event) {
+    var buttonClicked = event.target;
+    buttonClicked.parentElement.remove();
+}
