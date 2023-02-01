@@ -10,11 +10,13 @@
 
 /* Variable */
 :root {
-    --container-color: #1a1e21;
+    --container-color: #262d32;
     --seccond-color: #fd8f44;
-    --text-color: #172317;
+    /* --text-color: #172317; */
     --bg-color: #fff;
-    --third-color: #3c3a39;
+    --text-color: #3c3a39;
+    --main-heading: #728693;
+    --main-border: rgb(209,209,209);
 }
 
 a {
@@ -41,8 +43,8 @@ section {
 
 /* Header */
 #heading {
-    background: #554f51;
-    border-bottom: 2px solid black;
+    background: var(--main-heading);
+    border-bottom: 2px solid var(--main-border);
     width: 100%;
     height: 7vh;
     display: flex;
@@ -213,7 +215,7 @@ section {
     width: 100%;
     min-height: 70vh;
     background: var(--third-color);
-    background: url('./img/home/banner2.jpg') no-repeat center;
+    background: url('./img/home/banner.jfif') no-repeat center;
     background-size: cover;
     background-clip: border-box;
     display: grid;
@@ -245,14 +247,15 @@ section {
 .about-title {
     text-align: center;
     text-transform: uppercase;
-    color: brown;
+    color: var(--text-color);
     padding: 1rem;
     font-size: 1.5rem;
    
 }
 .about-info {
     display: flex;
-    border: 1px solid;
+    border: none;
+    box-shadow: 0 4px 14px hsl(355deg 25% 15% / 10%);
     border-radius: 4px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -260,7 +263,7 @@ section {
     
 }
 .about-img {
-    padding: 1rem 0 1rem 1rem;
+    padding: 1rem;
     flex-grow: 1;
     width: 20%;
     height: 30rem;
@@ -280,10 +283,12 @@ section {
 .about-heading {
     padding: 1rem 0;
     text-transform: uppercase;
+    color: var(--third-color);
 }
 .about-content {
     padding: 1rem 0;
     text-align: justify;
+    color: var(--third-color);
 }
 .about-button {
     padding: 10px 20px;
@@ -380,7 +385,7 @@ section {
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
-    border: 2px solid var(--seccond-color);
+    border: 2px solid var(--main-border);
     background-size: 100%;
 }
 
@@ -405,7 +410,7 @@ section {
 .box {
     text-align: center;
     padding: 2rem;
-    border: 1px solid;
+    border: 2px solid var(--main-border);
     border-radius: 4px;
     display: block;
     
@@ -544,7 +549,7 @@ section {
 }
 .input-info {
     display: flex;
-    border: 1px solid;
+    border: 1px solid var(--main-border);
     border-radius: 4px;
     margin: 1.5rem 0;
     padding: 0.8rem;
