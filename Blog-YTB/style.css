@@ -7,7 +7,6 @@
     box-sizing: border-box;
     
 }
-
 /* Variable */
 :root {
     --container-color: #262d32;
@@ -398,68 +397,42 @@ section {
 }
 .item-title {
     text-align: center;
-    padding: 20px;
     font-size: 1.5rem;
     text-transform: uppercase;
+    padding: 1rem 0;
 }
-.box-container {
+.shop-content {
     display: grid;
-    grid-template-columns: repeat(3, minmax(15rem,auto));
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
     gap: 1.5rem;
-    text-align: center;
-    min-height: 300px;
 }
-.box {
+.product-box {
+    position: relative;
     text-align: center;
-    padding: 2rem;
-    border: 2px solid var(--main-border);
-    border-radius: 4px;
-    display: block;
-    
+    border: none;
+    border-color: var(--main-border);
 }
-.box-img {
-    height: 10rem;
+.product-box:hover {
+    padding: 1rem;
+    border: 1px solid var(--main-border);
+    transition: 0.4s;
     border-radius: 10px;
-    object-fit: cover;
-    object-position: center;
 }
-.box-title-product {
-    padding: 15px 0;
-    font-size: 1rem;
+.product-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+.product-title {
+    font-size: 1.1rem;
     font-weight: 600;
-    overflow-wrap: break-word;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
 }
-.box span {
-    font-style: italic;
-    font-size: 0.7rem;
-    font-weight: 200;
-    text-decoration: line-through;
-}
-.price {
+.price-product {
     font-weight: 500;
-}
-.btn {
-    font-size: 0.7rem;
-    cursor: pointer;
-    padding: 0.4rem 0.9rem;
-    background-color: #fd8f44;
-    border-radius: 4px;
-    color: white;
-}
-.box-icon{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
-}
-.box-icon i {
-    padding: 0.4rem;
-    border: 1px solid;
-    border-radius: 4px;
-}
-.box .category {
-    padding-bottom: 0.4rem;
-    font-size: 0.7rem;
 }
 
 /* Reviewer / Rating about US */
@@ -541,6 +514,12 @@ section {
     border-radius: 1rem;
     box-sizing: border-box;
 }
+.contact-img:hover {
+    padding: 0.5rem;
+    transition: 0.5s;
+    border-radius: 1rem;
+
+}
 .contact-input {
     flex-grow: 2;
     margin-left: 1.5rem;
@@ -609,8 +588,6 @@ section {
 .information p {
     padding: 0.5rem 0.5rem;
 }
-
-
 
 /* -----------------------------------------------> */
 /* CSS of Post-page */
@@ -714,7 +691,7 @@ section {
     object-fit: cover;
     object-position: center;
     box-sizing: border-box;
-    border: 1px solid;
+    border: 1px solid var(--main-border);
     border-radius: 1rem;
 }
 .box-img-price {
@@ -725,7 +702,7 @@ section {
     object-position: center;
 }
 .box-img-price img {
-    border-radius: 1rem;
+    border-radius: 10px;
 }
 .box-buy-item {
     margin: 1rem;
@@ -770,6 +747,16 @@ section {
 .container-icon-post-page:hover {
     color: #fd8f44;
     transition: 0.3s ease;
+}
+.btn {
+    background-color: var(--seccond-color);
+    border-radius: 4px;
+    align-items: center;
+    padding: 0.4rem 0.5rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--bg-color);
+    font-weight: 300;
 }
 
 /* Login-Page */
