@@ -440,13 +440,17 @@ section {
 .price-product {
     font-weight: 500;
     margin-right: 2rem;
-    font-weight: 600;
+    font-weight: 100;
     font-size: 1.2rem;
     color: var(--seccond-color);
 }
 .add-cart {
     font-size: 1.2rem;
     color: var(--container-color);
+}
+.add-cart:hover {
+    color: var(--main-heading);
+    opacity: 0.4;
 }
 
 /* Reviewer / Rating about US */
