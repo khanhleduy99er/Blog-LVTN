@@ -146,6 +146,7 @@ section {
     height: 100px;
     object-fit: contain;
     padding: 10px;
+    border-radius: 1rem;
 }
 .cart-detail {
     display: grid;
