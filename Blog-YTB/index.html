@@ -1,431 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BLOG-LVTN</title>
     <!-- Link GOOGLE Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;500&family=Poppins:wght@400;500;600;700&family=Roboto+Flex:opsz,wght@8..144,100;8..144,500&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;500&family=Poppins:wght@400;500;600;700&family=Roboto+Flex:opsz,wght@8..144,100;8..144,500&family=Roboto:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
     <!-- Link CSS -->
-    <link rel="stylesheet" href="/Blog-YTB/style.css">
+    <link rel="stylesheet" href="/Blog-YTB/style.css" />
     <!-- BoxiIcon -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>N
-<body>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+      integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
     <!-- Header -->
     <header>
-        <!-- Nav -->
-        <div id="heading">
-            <!-- Logo -->
-            <a href="#" class="logo">Du.<span>Khanh</span></a>
+      <!-- Nav -->
+      <div id="heading">
+        <!-- Logo -->
+        <a href="#" class="logo">Du.<span>Khanh</span></a>
 
-            <!-- Navigation -->
-            <nav>
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#filter">Post</a>
-                <a href="#container-hot-item">Hot-Item</a>
-                <a href="#review">Review</a>
-                <a href="#contact">Contact</a>
-            </nav>
+        <!-- Navigation -->
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#filter">Post</a>
+          <a href="#container-hot-item">Hot-Item</a>
+          <a href="#review">Review</a>
+          <a href="#contact">Contact</a>
+        </nav>
 
-            <div class="right-heading">
-                <div>
-                    <!-- Icon shopping -->
-                    <i class="cart-icon fa-solid fa-cart-shopping" id="cart-shopping-icon"></i>
-                </div>
-                <div>
-                    <!-- Login BTN -->
-                    <a href="./login.html" class="login">Log in</a>
-                </div>
+        <div class="right-heading">
+          <div>
+            <!-- Icon shopping -->
+            <i
+              class="cart-icon fa-solid fa-cart-shopping"
+              id="cart-shopping-icon"
+            ></i>
+          </div>
+          <div>
+            <!-- Login BTN -->
+            <a href="./login.html" class="login">Log in</a>
+          </div>
 
-                <!-- List cart items -->
-                <div class="cart-item">
-                    <h2 class="cart-title">Your Cart</h2>
-                    <div class="cart-content">
-                    </div>
-                    <!-- Total items -->
-                    <div class="total-items">
-                        <div class="total-title">Total</div>
-                        <div class="total-price">$ 0</div>
-                    </div>
-                    <!-- Buy button -->
-                    <button type="button" class="btn-buy-total">Buy Now</button>
-                    <!-- Cart close -->
-                    <i class="fa-solid fa-circle-xmark" id="close-cart-list"></i>
-                </div>
+          <!-- List cart items -->
+          <div class="cart-item">
+            <h2 class="cart-title">Your Cart</h2>
+            <div class="cart-content"></div>
+            <!-- Total items -->
+            <div class="total-items">
+              <div class="total-title">Total</div>
+              <div class="total-price">$ 0</div>
             </div>
+            <!-- Buy button -->
+            <button type="button" class="btn-buy-total">Buy Now</button>
+            <!-- Cart close -->
+            <i class="fa-solid fa-circle-xmark" id="close-cart-list"></i>
+          </div>
         </div>
+      </div>
     </header>
 
     <!-- HOME Banner-->
     <banner id="home">
-        <div class="home-text">
-            
-            <h2 class="home-title">Sharing knowledge about Technologies</h2>
-            <span class="home-subtitle">
-                Empower Your Mind with Tech Knowledge - Join the Our Blog Today!</span>
-        </div>
+      <div class="home-text">
+        <h2 class="home-title">Sharing knowledge about Technologies</h2>
+        <span class="home-subtitle">
+          Empower Your Mind with Tech Knowledge - Join the Our Blog Today!</span
+        >
+      </div>
     </banner>
-
-
-    
 
     <!-- About Us -->
     <section id="about">
-        <h3 class="about-title">About Us</h2>
-            <div class="about-info">
-                <img src="./img/about-us/about-img.png" alt="#" class="about-img">
+      <h3 class="about-title">About Us</h3>
+      <div class="about-info">
+        <img src="./img/about-us/about-img.png" alt="#" class="about-img" />
 
-                <div class="column-about">
-                    <h3 class="about-heading">A litle about us</h3>
-                    <p class="about-content">The group behind the creation of the blog website is a dedicated team of individuals who are passionate about sharing their knowledge and ideas with the world. Comprised of experts in a variety of fields, they bring together a wealth of experience and creativity to create a platform that is both informative and engaging.
-                    <br>
-                    <br> Whether it's through insightful articles, thought-provoking discussions, or eye-catching visuals, their goal is to provide valuable content that inspires and informs their readers. With a commitment to excellence and a drive to constantly improve, the group is constantly pushing the boundaries of what is possible in the world of blogging.
-                    </p>
-                    <button class="about-button">View-Us</button>
-                </div>
-            </div>
+        <div class="column-about">
+          <h3 class="about-heading">A litle about us</h3>
+          <p class="about-content">
+            The group behind the creation of the blog website is a dedicated
+            team of individuals who are passionate about sharing their knowledge
+            and ideas with the world. Comprised of experts in a variety of
+            fields, they bring together a wealth of experience and creativity to
+            create a platform that is both informative and engaging.
+            <br />
+            <br />
+            Whether it's through insightful articles, thought-provoking
+            discussions, or eye-catching visuals, their goal is to provide
+            valuable content that inspires and informs their readers. With a
+            commitment to excellence and a drive to constantly improve, the
+            group is constantly pushing the boundaries of what is possible in
+            the world of blogging.
+          </p>
+          <button class="about-button">View-Us</button>
+        </div>
+      </div>
     </section>
 
-         <!-- Post Filter -->
+    <!-- Post Filter -->
     <section id="filter">
-        <div class="post-filter">
-            <button class="filter-item  active-filter" onclick="filterSelection('all')">All</button>
-            <button  class="filter-item" onclick="filterSelection('coding')">Coding</button>
-            <button class="filter-item" onclick="filterSelection('technologies')">Technologies</button>
-            <button class="filter-item" onclick="filterSelection('devices')">Devices</button>
-
-        </div>
+      <div class="post-filter" id="list-group-post"></div>
     </section>
 
     <!-- Post -->
-    <section class="post container">
-        <!-- PostBox1 -->
-        <div class="post-box coding">
-            <img src="/Blog-YTB/img/post-box1/box-1.jfif" alt="Box1" class="post-img">
-            <h2 class="category">#Coding</h2>
-            <a href="./postbox1.html" class="post-title">
-                Phân biệt về Git và Git hub
-            </a>
-            <span class="post-date">12-Dec-2022</span>
-            <p class="post-decription">Git là tên gọi là một hệ thống quản lý phiên bản phân tán phổ biến nhất hiện nay (Distributed Version Control System – DVCS). DVCS nghĩa là hệ thống giúp mỗi máy tính có thể lưu trữ nhiều phiên bản khác nhau của một mã nguồn được nhân bản (clone) từ một kho chứa mã nguồn (repository), mỗi thay đổi vào mã nguồn trên máy tính sẽ có thể ủy thác (commit) rồi đưa lên máy chủ nơi đặt kho chứa chính. Và một máy tính khác (nếu họ có quyền truy cập) cũng có thể clone lại mã nguồn từ kho chứa hoặc clone lại một tập hợp các thay đổi mới nhất trên máy tính kia. Trong Git, thư mục làm việc trên máy tính gọi là Working Tree.</p>
-            <!-- Profile -->
-            <div class="profile">
-                <img src="/Blog-YTB/img/khanh.jfif" alt="profile" class="profile-img">
-                <span class="profile-name">khanhleduy99er</span>
-            </div>
-        </div>
-
-        <!-- PostBox2 -->
-        <div class="post-box technologies">
-            <img src="/Blog-YTB/img/post-box2/box1.jfif" alt="Box1" class="post-img">
-            <h2 class="category">#Technologies</h2>
-            <a href="postbox2.html" class="post-title">
-                Bước tiến mới của Apple tại Ấn Độ
-            </a>
-            <span class="post-date">12-Dec-2022</span>
-            <p class="post-decription">Apple đã tìm được đối tác cung cấp linh kiện cho AirPods tại Ấn Độ, đánh dấu bước tiến trong quá trình mở rộng chuỗi cung ứng tại quốc gia Nam Á..</p>
-            <!-- Profile -->
-            <div class="profile">
-                <img src="/Blog-YTB/img/khanh.jfif" alt="profile" class="profile-img">
-                <span class="profile-name">khanhleduy99er</span>
-            </div>
-        </div>
-
-        <!-- PostBox3 -->
-        <div class="post-box devices">
-            <img src="/Blog-YTB/img/post-box3/box5.jfif" alt="Box1" class="post-img">
-            <h2 class="category">#Devices</h2>
-            <a href="postbox3.html" class="post-title">
-                DJI Osmo Mobile 6
-            </a>
-            <span class="post-date">12-Dec-2022filter</span>
-            <p class="post-decription">DJI Osmo Mobile 6 mang lại cho bạn cảm giác chân thực khi quay phim, sử dụng công nghê tiên tiến hàng đầu châu ấu, đi kèm với nó là chất lượng sản phẩm được gia công hoàn hảo nhất mà bạn từng thấy được.</p>
-            <!-- Profile -->
-            <div class="profile">
-                <img src="/Blog-YTB/img/khanh.jfif" alt="profile" class="profile-img">
-                <span class="profile-name">khanhleduy99er</span>
-            </div>
-        </div>
-
-        <!-- PostBox4 -->
-        <div class="post-box coding">
-            <img src="https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif" alt="Box1" class="post-img">
-            <h2 class="category">#Coding</h2>
-            <a href="postbox4.html" class="post-title">
-                CSS flexbox 
-            </a>
-            <span class="post-date">12-Dec-2022</span>
-            <p class="post-decription">CSS flexbox là một one-dimensional(hay còn gọi là 1D) layout pattern, một trong những pattern giúp bạn dễ dàng thiết kế layout một cách linh hoạt và hiệu quả. Phân chia không gian giữa các items và kiểm soát căn chỉnh chúng trong container flex layout(vùng chứa). Với flexbox, chúng ta có thể dễ dàng sắp xếp các items từ trái sang phải, từ trên xuống dưới, đồng thời kiểm soát khoảng cách và thứ tự của các items trong container.</p>
-            <!-- Profile -->
-            <div class="profile">
-                <img src="/Blog-YTB/img/khanh.jfif" alt="profile" class="profile-img">
-                <span class="profile-name">khanhleduy99er</span>
-            </div>
-        </div>
-
-        <!-- PostBox5 -->
-        <div class="post-box technologies">
-            <img src="/Blog-YTB/img/post-box5/box1.gif" alt="Box1" class="post-img">
-            <h2 class="category">#Technologies</h2>
-            <a href="postbox5.html" class="post-title">
-                Chiêu trò của Spotify với tính năng Wrapped
-            </a>
-            <span class="post-date">12-Dec-2022</span>
-            <p class="post-decription">Thật trớ trêu khi hàng triệu người dùng ăn mừng và khoe khoang “chiến tích” là dữ liệu được Spotify thu thập suốt một năm trời.</p>
-            <!-- Profile -->
-            <div class="profile">
-                <img src="/Blog-YTB/img/khanh.jfif" alt="profile" class="profile-img">
-                <span class="profile-name">khanhleduy99er</span>
-            </div>
-        </div>
-
-        <!-- PostBox6 -->
-        <div class="post-box devices">
-            <img src="/Blog-YTB/img/post-box6/box4.png" alt="Box1" class="post-img">
-            <h2 class="category">#Devices</h2>
-            <a href="postbox6.html" class="post-title">
-                Airpod 3
-            </a>
-            <span class="post-date">12-Dec-2022</span>
-            <p class="post-decription">AirPods 3 mang tới một sự lột xác đáng kể so với hai thế hệ AirPods trước đây, cả về ngoại hình lẫn chất âm cũng như tính năng bổ trợ.</p>
-            <!-- Profile -->
-            <div class="profile">
-                <img src="/Blog-YTB/img/khanh.jfif" alt="profile" class="profile-img">
-                <span class="profile-name">khanhleduy99er</span>
-            </div>
-        </div>
-
-        <!-- PostBox7 -->
-        <div class="post-box coding">
-            <img src="https://media.giphy.com/media/3o7TKTTQInBeEvDY9G/giphy.gif" alt="Box1" class="post-img">
-            <h2 class="category">#Coding</h2>
-            <a href="postbox7.html" class="post-title">
-                What is HTML-Hypertext Markup Language ?
-            </a>
-            <span class="post-date">12-Dec-2022</span>
-            <p class="post-decription">HTML tạm dịch là ngôn ngữ đánh dấu siêu văn bản. Người ta thường sử dụng HTML trong việc phân chia các đoạn văn, heading, links, blockquotes,…</p>
-            <!-- Profile -->
-            <div class="profile">
-                <img src="/Blog-YTB/img/khanh.jfif" alt="profile" class="profile-img">
-                <span class="profile-name">khanhleduy99er</span>
-            </div>
-        </div>
-
-        <!-- PostBox8 -->
-        <div class="post-box technologies">
-            <img src="/Blog-YTB/img/post-box8/box1.jfif" alt="Box1" class="post-img">
-            <h2 class="category">#Technologies</h2>
-            <a href="postbox8.html" class="post-title">
-                Apple sẽ tránh vết xe đổ của Google, Microsoft
-            </a>
-            <span class="post-date">12-Dec-2022</span>
-            <p class="post-decription">Làn sóng sa thải nhân sự hàng loạt đang làm rung chuyển ngành công nghệ, nhưng điều này sẽ không xảy ra với Apple.</p>
-            <!-- Profile -->
-            <div class="profile">
-                <img src="/Blog-YTB/img/khanh.jfif" alt="profile" class="profile-img">
-                <span class="profile-name">khanhleduy99er</span>
-            </div>
-        </div>
-
-        <!-- PostBox9 -->
-        <div class="post-box devices">
-            <img src="/Blog-YTB/img/post-box9/box3.jpg" alt="Box1" class="post-img">
-            <h2 class="category">#Devices</h2>
-            <a href="postbox9.html" class="post-title">
-                Apple pencil. Thương hiệu uy tín đến từ Mỹ
-            </a>
-            <span class="post-date">12-Dec-2022</span>
-            <p class="post-decription">
-                Apple Pencil được Apple ra mắt vào năm 2015, bút cảm ứng sở hữu thiết kế đơn giản, nhỏ gọn, trang nhã và thân thiện với người dùng.
-            <!-- Profile -->
-            <div class="profile">
-                <img src="/Blog-YTB/img/khanh.jfif" alt="profile" class="profile-img">
-                <span class="profile-name">khanhleduy99er</span>
-            </div>
-        </div>
-    </section>
-
+    <section class="post container" id="list-post"></section>
 
     <!-- Hot items -->
     <section id="container-hot-item">
-        <h3 class="item-title">Hot Items of Us</h3>
-        <!-- Content -->
-        <div class="shop-content">
-            <!-- Box1 -->
-            <div class="product-box">
-                <img src="./img/hot-items/1.jfif" alt="#" class="product-img">
-                <h2 class="product-title">Apple accesories</h2>
-                <span class="price-product">$ 50</span>
-                <i class="fa-sharp fa-solid fa-cart-shopping add-cart"></i>
-            </div>
-            <!-- Box2 -->
-            <div class="product-box">
-                <img src="./img/hot-items/2.jfif" alt="#" class="product-img">
-                <h2 class="product-title">Case of iphone 13</h2>
-                <span class="price-product">$ 60</span>
-                <i class="fa-sharp fa-solid fa-cart-shopping add-cart"></i>
-            </div>
-            <!-- Box3 -->
-            <div class="product-box">
-                <img src="./img/hot-items/3.jfif" alt="#" class="product-img">
-                <h2 class="product-title">Apple watch serries 7</h2>
-                <span class="price-product">$ 70</span>
-                <i class="fa-sharp fa-solid fa-cart-shopping add-cart"></i>
-            </div>
-            <!-- Box4 -->
-            <div class="product-box">
-                <img src="./img/hot-items/4.jpg" alt="#" class="product-img">
-                <h2 class="product-title">Apple pencil 2</h2>
-                <span class="price-product">$ 110</span>
-                <i class="fa-sharp fa-solid fa-cart-shopping add-cart"></i>
-            </div>
-            <!-- Box5 -->
-            <div class="product-box">
-                <img src="./img/hot-items/5.jpg" alt="#" class="product-img">
-                <h2 class="product-title">Iphone 5 5G</h2>
-                <span class="price-product">$ 700</span>
-                <i class="fa-sharp fa-solid fa-cart-shopping add-cart"></i>
-            </div>
-            
-        </div>
+      <h3 class="item-title">Hot Items of Us</h3>
+      <!-- Content -->
+      <div class="shop-content" id="list-product">
+      </div>
     </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!-- Reviewer / Rating about US -->
     <section id="review">
-        <h2 class="review-title">Review Us</h2>
-        <div class="container-layout-review">
-            <div class="container-column">
-                <img src="./img/review/quote-img.png" alt="quotes" class="quote-img">
-                <div class="container-info">
-                    <img src="./img/review/reviewer.jpg" alt="" class="reviewer">
-                    <p class="reviewer-name">Johny Deep</p>
-                </div>
-                <div class="container-rating-star">          
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half"></i>
-                </div>
-                <h5 class="category">@Technologies</h5>
-                <p class="container-content-review">
-                    This blog is readly helpful with me and I'll sharing it for my friends. thanks the author who write this blog and give me a lot of information helpfully. Thanks. ,<br>
-                    I hope Our team can improve more about Information of Technologies, review more item and appriciate its usefully
-                </p>
-            </div>
-            <div class="container-column">
-                <img src="./img/review/quote-img.png" alt="quotes" class="quote-img">
-                <div class="container-info">
-                    <img src="./img/review/reviewer.jpg" alt="" class="reviewer">
-                    <p class="reviewer-name">Johny Wick</p>
-                </div>
-                <div class="container-rating-star">          
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half"></i>
-                </div>
-                <h5 class="category">@Coding</h5>
-                <p class="container-content-review">
-                    I am currently struggling with coding for my website, but thanks to this blog I was able to absorb a lot of useful information and help me to understand many problems that I am having, thanks to the author took the time to share for people who are blind to technology like me to understand more thoroughly and code faster.
-                </p>
-            </div>
-            <div class="container-column">
-                <img src="./img/review/quote-img.png" alt="quotes" class="quote-img">
-                <div class="container-info">
-                    <img src="./img/review/reviewer.jpg" alt="" class="reviewer">
-                    <p class="reviewer-name">Thomas Edison</p>
-                </div>
-                <div class="container-rating-star">          
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half"></i>
-                </div>
-                <h5 class="category">@Devices</h5>
-                <p class="container-content-review">
-                    Thank you for the devices that the website has shared with me useful information about them, they are very helpful to us as well as thank you for the service that you give us is really good. The product in general, I have not used but will return to review as soon as possible, I rate this product 5 stars for you guys.
-                </p>
-            </div>
+      <h2 class="review-title">Review Us</h2>
+      <div class="container-layout-review" id="list-review">
         </div>
     </section>
 
     <!-- Contact Us -->
     <section id="contact">
-        <h3 class="contact-title">contact/feedback us</h3>
-        <div class="contact-layout">
-            <img src="../Blog-YTB/img/contact/cotact.jfif" alt=sunday-working" class="contact-img">
-            <div class="contact-input">
-                <h3 class="contact-title-input">Feed back for US</h3>
-                <div class="input-info">
-                    <span><i class="fa-solid fa-circle-user">
-                    </i></span>
-                    <input type="text" placeholder="Type your Name">
-                </div>
-                <div class="input-info">
-                    <span><i class="fa-solid fa-envelope"></i>   
-                    </span>
-                    <input type="text" placeholder="Type your Email">
-                </div>
-                <div class="input-info">
-                    <span><i class="fa-solid fa-phone"></i></span>
-                    <input type="number" placeholder="Type your Phone number">
-                </div>
-                <a href="#" class="contact-btn">Send</a>
-            </div>
+      <h3 class="contact-title">contact/feedback us</h3>
+      <div class="contact-layout">
+        <img src="../Blog-YTB/img/contact/cotact.jfif" alt=sunday-working"
+        class="contact-img">
+        <div class="contact-input">
+          <h3 class="contact-title-input">Feed back for US</h3>
+          <div class="input-info">
+            <span><i class="fa-solid fa-circle-user"> </i></span>
+            <input type="text" placeholder="Type your Name" />
+          </div>
+          <div class="input-info">
+            <span><i class="fa-solid fa-envelope"></i> </span>
+            <input type="text" placeholder="Type your Email" />
+          </div>
+          <div class="input-info">
+            <span><i class="fa-solid fa-phone"></i></span>
+            <input type="number" placeholder="Type your Phone number" />
+          </div>
+          <a href="#" class="contact-btn">Send</a>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <section class="footer">
-        <div class="container-icon">
-            <a href="#" class="icon-social">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="#" class="icon-social">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="#" class="icon-social">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="#" class="icon-social">
-                <i class="fa-brands fa-twitter"></i>
-            </a>
-            <a href="#" class="icon-social">
-                <i class="fa-brands fa-pinterest"></i>
-            </a>
-        </div>
-        <div class="itacnfomation">
-            <p>Crated by
-                <span>Du.Khanh</span>
-            </p>
-            <p class="thanks">Thanks for Visit</p>
-        </div>
+      <div class="container-icon">
+        <a href="#" class="icon-social">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="#" class="icon-social">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#" class="icon-social">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="#" class="icon-social">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="#" class="icon-social">
+          <i class="fa-brands fa-pinterest"></i>
+        </a>
+      </div>
+      <div class="itacnfomation">
+        <p>
+          Crated by
+          <span>Du.Khanh</span>
+        </p>
+        <p class="thanks">Thanks for Visit</p>
+      </div>
     </section>
 
     <!-- Link Front Awesome -->
-    <script src="https://kit.fontawesome.com/a714f771f9.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/a714f771f9.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- JQuery Link -->
-    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"
+    ></script>
     <!-- Js -->
     <script src="../Blog-YTB/main.js"></script>
-</body>
+  </body>
 </html>

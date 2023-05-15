@@ -395,9 +395,9 @@ section {
   background-size: 100%;
 }
 
-.post-box {
+/* .post-box {
   display: none;
-}
+} */
 .show {
   display: block;
 }
