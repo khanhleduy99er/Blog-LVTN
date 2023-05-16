@@ -52,9 +52,11 @@ function renderPost(data) {
               />
               <h2 class="category">#Coding</h2>
               <a href="./postbox1.html" class="post-title">
-                Phân biệt về Git và Git hub
+                ${t.tieuDe}
               </a>
-              <span class="post-date">12-Dec-2022</span>
+              <span class="post-date">${moment(t.ngayTao).format(
+                "DD-MMM-YYYY"
+              )}</span>
               <p class="post-decription">
                 ${t.noiDung}
               </p>
