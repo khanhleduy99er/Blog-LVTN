@@ -106,6 +106,54 @@ section {
   transition: 0.3s;
 }
 
+/* Register from */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+button {
+  margin-top: 1rem;
+  height: fit-content;
+  padding: 4px 7px;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 4px;
+  border-color: wheat;
+  background: var(--seccond-color);
+  color: var(--bg-color);
+  margin-right: 1rem;
+}
+
+.modal-content {
+  font-size: 1.5rem;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /* Cart-items */
 .cart-item {
   display: none;
@@ -458,58 +506,6 @@ section {
   opacity: 0.4;
 }
 
-/* Reviewer / Rating about US */
-.review-title {
-  text-align: center;
-  padding: 1rem 0;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-}
-.container-layout-review {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(15rem, auto));
-  gap: 1.5rem;
-  box-shadow: 0 4px 14px hsl(355deg 25% 15% / 10%);
-  overflow: auto;
-}
-.container-column {
-  padding: 1.5rem;
-}
-.quote-img {
-  width: 2rem;
-  height: 2rem;
-  float: none;
-}
-.container-info {
-  display: flex;
-  align-items: center;
-  padding-left: 1rem;
-}
-.reviewer {
-  width: 3rem;
-  height: 3rem;
-  object-fit: cover;
-  border-radius: 50%;
-  display: block;
-  margin-right: 0.5rem;
-}
-.reviewer-name {
-  font-weight: 500;
-}
-.container-rating-star {
-  text-align: left;
-  padding: 0.5rem 1rem;
-}
-.category {
-  padding: 0 1rem;
-  margin-bottom: 0.5rem;
-}
-.container-content-review {
-  line-height: 1.4;
-  text-align: left;
-  text-align: justify;
-}
-
 /* Contact US */
 
 #contact {
@@ -529,6 +525,7 @@ section {
   flex-wrap: wrap;
 }
 .contact-img {
+  margin-top: 3rem;
   flex-grow: 1;
   width: 30%;
   height: 20rem;
@@ -558,6 +555,7 @@ section {
   margin: 1.5rem 0;
   padding: 0.8rem;
 }
+.input-info textarea,
 .input-info input {
   width: 100%;
   font-size: 1rem;
