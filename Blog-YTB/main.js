@@ -25,6 +25,10 @@ async function onClickGroupPost(ma) {
   groupPost.innerHTML = renderGroupPost(dataGroupPost, activeGroupPost);
   await getPost(ma);
 }
+
+function onClickCart(params) {
+  console.log(params);
+}
 //#endregion
 
 //#region render
@@ -52,9 +56,11 @@ function renderPost(data) {
               />
               <h2 class="category">#Coding</h2>
               <a href="./postbox1.html" class="post-title">
-                Phân biệt về Git và Git hub
+                ${t.tieuDe}
               </a>
-              <span class="post-date">12-Dec-2022</span>
+              <span class="post-date">${moment(t.ngayTao).format(
+                "DD-MMM-YYYY"
+              )}</span>
               <p class="post-decription">
                 ${t.noiDung}
               </p>
@@ -73,13 +79,16 @@ function renderPost(data) {
 }
 
 function renderProduct(data) {
+ 
   return `${data
     .map((t) => {
+      const _data = JSON.stringify(t);
+      console.log(typeof _data);
       return ` <div class="product-box">
               <img src="${t.hinhAnh}" alt="#" class="product-img" />
               <h2 class="product-title">${t.ten}</h2>
               <span class="price-product">$ ${t.gia}</span>
-              <i class="fa-sharp fa-solid fa-cart-shopping add-cart"></i>
+              <i class="fa-sharp fa-solid fa-cart-shopping add-cart" onclick="onClickCart(${_data})"></i>
             </div>`;
     })
     .join("")}`;
