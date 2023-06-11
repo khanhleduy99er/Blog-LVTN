@@ -896,3 +896,6 @@ section {
   color: var(--seccond-color);
   transition: 0.2s;
 }
+.cart-item-product{
+  padding: 0 7px;
+}
