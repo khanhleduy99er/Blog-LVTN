@@ -5,6 +5,11 @@ const groupPost = document.getElementById("list-group-post");
 const post = document.getElementById("list-post");
 const product = document.getElementById("list-product");
 const review = document.getElementById("list-review");
+const cartListProduct = document.getElementById("list-cart");
+let listProduct = [];
+let listCardProduct = [];
+let totalCart = document.getElementById("total-price");
+
 let dataGroupPost = [];
 const urlApi = "http://localhost:8081";
 let activeGroupPost = 0;
@@ -26,18 +31,69 @@ async function onClickGroupPost(ma) {
   await getPost(ma);
 }
 
-function onClickCart(params) {
-  console.log(params);
+function updateCartProduct(id) {
+  listCardProduct.map((t) => {
+    if (t._id === id) {
+      return { ...t, amount: t.amount++ };
+    }
+    return { ...t };
+  });
+}
+
+function getTotal() {
+  const _total = listCardProduct
+    .map((t) => t.gia * t.amount)
+    .reduce((pre, current) => pre + current, 0);
+  totalCart.innerHTML = `$${_total}`;
+}
+
+function onClickCart(id) {
+  const product = listProduct.find((t) => t._id == id);
+  if (!product) {
+    return;
+  }
+  const checkExist = listCardProduct.some((t) => t._id === id);
+  if (checkExist) {
+    updateCartProduct(id);
+  } else {
+    listCardProduct.push({ ...product, amount: 1 });
+  }
+  getTotal();
+  cartListProduct.innerHTML = renderCartProduct(listCardProduct);
 }
 //#endregion
 
 //#region render
+
+function renderCartProduct(data) {
+  return `${data
+    .map((t) => {
+      return `<div>
+      <div class="cart-item-product">
+      ${t.ten}: <span style="float: right;display: flex;
+      align-items: center;"><span>${t.gia}</span> x
+      <input
+        type="number"
+        id="quantity"
+        value="${t.amount}"
+        name="quantity"
+        min="1"
+        max="5"
+      /></span>
+
+
+    </div>
+      </div>`;
+    })
+    .join("")}`;
+}
+
 function renderGroupPost(data, ma) {
   return `${data
     .map((t) => {
       return `<button class="filter-item ${
-        ma === t.ma ? "active-filter" : ""
-      }"  onclick="onClickGroupPost(${t.ma})">
+        ma == t.ma ? "active-filter" : ""
+      }"  onclick="onClickGroupPost('${t.ma}')">
                 ${t.ten}
               </button>`;
     })
@@ -79,16 +135,13 @@ function renderPost(data) {
 }
 
 function renderProduct(data) {
- 
   return `${data
     .map((t) => {
-      const _data = JSON.stringify(t);
-      console.log(typeof _data);
-      return ` <div class="product-box">
+      return `<div class="product-box">
               <img src="${t.hinhAnh}" alt="#" class="product-img" />
               <h2 class="product-title">${t.ten}</h2>
               <span class="price-product">$ ${t.gia}</span>
-              <i class="fa-sharp fa-solid fa-cart-shopping add-cart" onclick="onClickCart(${_data})"></i>
+              <i class="fa-sharp fa-solid fa-cart-shopping add-cart" onclick="onClickCart('${t._id}')"></i>
             </div>`;
     })
     .join("")}`;
@@ -141,6 +194,7 @@ async function getPost(id) {
 async function getProduct() {
   const response = await axios.get(`${urlApi}/api/product`);
   product.innerHTML = renderProduct(response.data);
+  listProduct = response.data;
 }
 async function getReview() {
   const response = await axios.get(`${urlApi}/api/review-us`);
