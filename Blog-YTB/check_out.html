@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Login-page</title>
+    <!-- Link GOOGLE Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;500&family=Poppins:wght@400;500;600;700&family=Roboto+Flex:opsz,wght@8..144,100;8..144,500&family=Roboto:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link font-awesome -->
+    <script
+      src="https://kit.fontawesome.com/a714f771f9.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="/Blog-YTB/style.css" />
+    <!-- BoxiIcon -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <header>
+        <a href="#" class="logo">Du.<span>Khanh</span></a>
+        <div>
+          <p>
+            Bạn đã đến với trang thanh toán (Vui lòng nhập đầy đủ thông tin)
+          </p>
+        </div>
+      </header>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="container">
+      <div class="sidebar">
+        <div>
+          <div class="form-group">
+            <label for="name">Họ và tên:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="address">Địa chỉ:</label>
+            <input type="text" id="address" name="address" required />
+          </div>
+
+          <div class="form-group">
+            <label for="city">Thành phố:</label>
+            <input type="text" id="city" name="city" required />
+          </div>
+        </div>
+        <div>
+          <div class="form-group">
+            <label for="phone-number">Số điên thoại: </label>
+            <input type="text" id="card-number" name="card-number" required />
+          </div>
+        </div>
+
+        <div>
+          <div class="form-group">
+            <label for="message">Lời nhắn:</label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+        </div>
+
+        <div class="payment-method">
+          <label>
+            <input type="radio" name="payment-method" value="cod" />
+            <i class="fa-sharp fa-solid fa-truck"></i>
+            Thanh toán khi nhận hàng
+          </label>
+          <label>
+            <input type="radio" name="payment-method" value="cod" />
+            <i class="fa-regular fa-credit-card"></i>
+            Thanh toán với Zalopay
+          </label>
+        </div>
+        <div class="button-container">
+          <button type="submit-checkout">Thanh toán</button>
+          <button type="cancel-checkout">Huỷ bỏ</button>
+        </div>
+      </div>
+
+      <!-- Main content -->
+      <div class="cart">
+        <h3>Giỏ hàng của bạn</h3>
+        <div class="cart__box">
+          <div class="cart__item-list" id="cart__item-list">
+            <div class="cart__item" data-cart-id="#">
+              <div class="cart__item-image">
+                <a href="javascript:void(0)"
+                  ><img
+                    loading="lazy"
+                    src="./img/checkout/img1.jpg"
+                    alt="product-image"
+                /></a>
+              </div>
+              <div
+                class="cart__item-description"
+                data-gtm-vis-recent-on-screen-9717545_308="4135"
+                data-gtm-vis-first-on-screen-9717545_308="4135"
+                data-gtm-vis-total-visible-time-9717545_308="100"
+                data-gtm-vis-has-fired-9717545_308="1"
+              >
+                <a href="#" class="product-title"
+                  >Laptop HP 340S G7 i3-1005G1/8GB/512GB/Win10 224L0PA</a
+                >
+                <div class="cart__item-box">
+                  <div class="price-after">8.990.000đ</div>
+                  <div class="product-counter">
+                    <div class="counter-minus">
+                      <a href="javascript:void(0)" class="counter-minus-cta"
+                        >−</a
+                      >
+                    </div>
+                    <div
+                      class="counter-content"
+                      data-product-id="124877"
+                      data-item-key="2872694655"
+                      data-item-quantity="1"
+                    >
+                      1
+                    </div>
+                    <div class="counter-plus">
+                      <a href="javascript:void(0)" class="counter-plus-cta"
+                        >+</a
+                      >
+                    </div>
+                  </div>
+                  <div class="thankyou-product-quantity">
+                    Số&nbsp;lượng:<span>1</span>
+                  </div>
+                </div>
+                <div class="delivery-time" data-product="124877"></div>
+              </div>
+            </div>
+          </div>
+          <div class="cart__total">
+            <div class="cart__total-box">
+              <div class="cart__total-sub">
+                <div class="label">Tạm tính</div>
+                <div class="content">8.990.000đ</div>
+              </div>
+              <div class="cart__total-promotion">
+                <div class="label">Khuyến mãi</div>
+                <div class="content">0đ</div>
+              </div>
+              <div class="cart__total-delivery">
+                <div class="label">Phí vận chuyển</div>
+                <div class="content">0đ</div>
+              </div>
+            </div>
+            <div class="cart__total-content">
+              <div class="label">Tổng tiền:</div>
+              <div class="content">8.990.000đ</div>
+            </div>
+            <div class="price-include-vat">
+              <sup>*</sup> Giá trên đã bao gồm VAT và phí vận chuyển.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- content page -->
+  </body>
+</html>
