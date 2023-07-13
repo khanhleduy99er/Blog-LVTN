@@ -361,6 +361,7 @@ button {
   border: none;
   font-size: 1.2rem;
   background: none;
+  color: #262d32;
 }
 .active-filter {
   background: var(--seccond-color);

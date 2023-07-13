@@ -71,17 +71,16 @@ function renderCartProduct(data) {
       return `<div>
       <div class="cart-item-product">
       ${t.ten}: <span style="float: right;display: flex;
-      align-items: center;"><span>${t.gia}</span> x
+      align-items: center;"><span>${t.gia}</span>&nbsp x  &nbsp
       <input
         type="number"
         id="quantity"
         value="${t.amount}"
+        onchange="onage()"
         name="quantity"
         min="1"
         max="5"
-      /></span>
-
-
+     /></span>
     </div>
       </div>`;
     })

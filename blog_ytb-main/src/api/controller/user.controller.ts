@@ -10,7 +10,6 @@ export async function Login(req: Request, res: Response) {
   const _user = await user.findOne({
     taiKhoan: req.body.taiKhoan,
     matKhau: req.body.matKhau,
-    isAdmin: true,
   });
   if (_user) {
     const token = sign(
