@@ -140,7 +140,7 @@ function renderProduct(data) {
               <img src="${t.hinhAnh}" alt="#" class="product-img" />
               <h2 class="product-title">${t.ten}</h2>
               <span class="price-product">$ ${t.gia}</span>
-              <i class="fa-sharp fa-solid fa-cart-shopping add-cart" onclick="onClickCart('${t._id}')"></i>
+              <i class="fa-sharp fa-solid fa-cart-shopping add-cart"></i>
             </div>`;
     })
     .join("")}`;

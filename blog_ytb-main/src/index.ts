@@ -7,6 +7,7 @@ import routerProduct from "./api/routes/product.routes";
 import routerReviewUs from "./api/routes/review-us.routes";
 import routerUser from "./api/routes/user.routes";
 import authencationUser from "./api/routes/authencation.routes";
+import routeImage from "./api/routes/image";
 
 const app = express();
 
@@ -29,6 +30,7 @@ app.use("/api/review-us", routerReviewUs);
 app.use("/api/user", routerUser);
 app.use("/api/user", routerUser);
 app.use("/api/login", authencationUser);
+app.use("/api/image", routeImage);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8081;
