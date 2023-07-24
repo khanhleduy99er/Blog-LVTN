@@ -235,7 +235,7 @@
               <!-- Large modal -->
               <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Tạo Post</button>
 
-              <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+              <div id="modalwindow" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                   <div class="modal-content">
 
@@ -258,33 +258,29 @@
                               name="postTitleInput"
                             />
                           </div>
-                  
+                          <div class="form-group">
+                            <label for="postTitleInput" class="form-group">Nội dung :</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="postContentInput"
+                              name="postTitleInput"
+                            />
+                          </div>
                           <label for="category" style="display: inline-block;;">Chọn hashtag #:</label>
-                          <br>
-                              <select class="form-control text-white" id="category" style="display: inline-block; width: fit-content; background-color: rgb(186, 132, 132);">
-                                  <option value="coding">Coding</option>
-                                  <option value="technologies">Technologies</option>
-                                  <option value="devices">Devices</option>
+                          <br />
+                              <select class="form-control text-white" id="selectGroupPost" style="display: inline-block; width: fit-content; background-color: rgb(186, 132, 132);">
+                                  
                               </select>
 
-                              <br>
-                              <label class="post-date-created" style="margin-top: 10px
-                              ;">Ngày tạo post<span class="required">*</span>
-                                </label>
-                                <br>
-                                <div>
-                                  <input style="max-width: 12rem;" id="birthday" class="date-picker form-control" placeholder="dd-mm-yyyy" type="text" required="required" type="text" onfocus="this.type='date'" onmouseover="this.type='date'" onclick="this.type='date'" onblur="this.type='text'" onmouseout="timeFunctionLong(this)">
-                                  <script>
-                                    function timeFunctionLong(input) {
-                                      setTimeout(function() {
-                                        input.type = 'text';
-                                      }, 60000);
-                                    }
-                                  </script>
-                                </div>
+                              <!-- <div></div> -->
+                              <br />
+                              <select class="form-control text-white" id="selectImage" style="display: inline-block; width: fit-content; background-color: rgb(186, 132, 132);">
+                                  
+                              </select>
                               </div>
-                          
-                  
+        
+
                           <div class="form-group" style="margin-top: 10px;">
                             <label for="postDescriptionInput">Mô tả bài viết:</label>
                             
@@ -373,7 +369,7 @@
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-                        <button type="button" class="btn btn-primary">Lưu bài viết</button>
+                        <button type="button" class="btn btn-primary" onclick="onSubmit()">Lưu bài viết</button>
                       </div>
                     </div>
 

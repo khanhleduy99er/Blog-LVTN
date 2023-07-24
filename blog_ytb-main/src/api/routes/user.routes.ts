@@ -2,7 +2,6 @@ import {
   CreateUser,
   DeleteUser,
   GetUsers,
-  Login,
   UpdateUser,
 } from "../controller/user.controller";
 import { routeMiddleware } from "./route-base";
