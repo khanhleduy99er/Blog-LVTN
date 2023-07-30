@@ -14,7 +14,7 @@ let dataGroupPost = [];
 const urlApi = "http://localhost:8081";
 let activeGroupPost = 0;
 
-//#region Init
+// call 4 function in Init in region Init
 async function init() {
   await getGroupPost();
   await getPost(0);
@@ -22,8 +22,9 @@ async function init() {
   await getReview();
 }
 init();
-//#endregion
+// end region init
 
+// update content into Dom element when clicking
 //#region event
 async function onClickGroupPost(ma) {
   activeGroupPost = ma;
@@ -31,6 +32,7 @@ async function onClickGroupPost(ma) {
   await getPost(ma);
 }
 
+// update cart propduct by list cart
 function updateCartProduct(id) {
   listCardProduct.map((t) => {
     if (t._id === id) {
@@ -40,6 +42,7 @@ function updateCartProduct(id) {
   });
 }
 
+// update price of item in list cart
 function getTotal() {
   const _total = listCardProduct
     .map((t) => t.gia * t.amount)
@@ -47,6 +50,7 @@ function getTotal() {
   totalCart.innerHTML = `$${_total}`;
 }
 
+// update total price and quantify of item in list cart 
 function onClickCart(id) {
   const product = listProduct.find((t) => t._id == id);
   if (!product) {
@@ -65,6 +69,7 @@ function onClickCart(id) {
 
 //#region render
 
+// render cart in list item and update item in list cart with HTML (handle UI list cart Item)
 function renderCartProduct(data) {
   return `${data
     .map((t) => {
@@ -87,6 +92,7 @@ function renderCartProduct(data) {
     .join("")}`;
 }
 
+// render GrPost in HTML
 function renderGroupPost(data, ma) {
   return `${data
     .map((t) => {
@@ -99,6 +105,7 @@ function renderGroupPost(data, ma) {
     .join("")}`;
 }
 
+// render Post in HTML
 function renderPost(data) {
   return `${data
     .map((t) => {
@@ -133,6 +140,7 @@ function renderPost(data) {
     .join("")}`;
 }
 
+// render item product for sale in HTMl
 function renderProduct(data) {
   return `${data
     .map((t) => {
@@ -146,6 +154,7 @@ function renderProduct(data) {
     .join("")}`;
 }
 
+// render review Item of User in HTML
 function renderReview(data) {
   return `${data
     .map((t) => {

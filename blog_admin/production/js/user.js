@@ -1,3 +1,4 @@
+// 
 const token = localStorage.getItem("token");
 if (!token) {
   location.href = "login.html";
@@ -43,6 +44,8 @@ function renderUser(data) {
       </div>
     `;
 }
+
+// get user for Db
 async function getUser() {
   const config = {
     method: "get",
@@ -52,6 +55,7 @@ async function getUser() {
     },
   };
 
+  // render User of blog 
   await axios(config)
     .then(function (response) {
       users.innerHTML = renderUser(response.data);
