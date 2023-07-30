@@ -311,120 +311,7 @@
 
             <div class="clearfix"></div>
 
-            <div class="row">
-              <div class="x_panel">
-                <div class="x_content">
-                  <div class="col-md-12 col-sm-12 text-center">
-                    <ul class="pagination pagination-split">
-                      <li>
-                        "Click View profile để kiểm tra thông tin người dùng"
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="clearfix"></div>
-
-                  <div class="col-md-4 col-sm-4 profile_details">
-                    <div class="well profile_view">
-                      <div class="col-sm-12">
-                        <h4 class="brief"><i>User đã đăng ký</i></h4>
-                        <div class="left col-sm-7">
-                          <h2>Le duy khanh</h2>
-                          <p><strong>About: </strong> Người đọc blog</p>
-                          <ul class="list-unstyled">
-                            <li><i class="fa fa-building"></i> Address:</li>
-                            <li><i class="fa fa-phone"></i> Phone #:</li>
-                          </ul>
-                        </div>
-                        <div class="right col-sm-5 text-center">
-                          <img
-                            src="images/dio.png"
-                            alt=""
-                            class="img-circle img-fluid"
-                          />
-                        </div>
-                      </div>
-                      <div class="bottom text-center">
-                        <div class="emphasis">
-                          <button type="button" class="btn btn-success btn-sm">
-                            <i class="fa fa-trash"></i> Xoá User
-                          </button>
-                          <button type="button" class="btn btn-primary btn-sm" onclick="window.location.href='profile.html';">
-                            <i class="fa fa-user"></i> View Profile
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-4 col-sm-4 profile_details">
-                    <div class="well profile_view">
-                      <div class="col-sm-12">
-                        <h4 class="brief"><i>User đã đăng ký</i></h4>
-                        <div class="left col-sm-7">
-                          <h2>Le duy khanh</h2>
-                          <p><strong>About: </strong> Người đọc blog</p>
-                          <ul class="list-unstyled">
-                            <li><i class="fa fa-building"></i> Address:</li>
-                            <li><i class="fa fa-phone"></i> Phone #:</li>
-                          </ul>
-                        </div>
-                        <div class="right col-sm-5 text-center">
-                          <img
-                            src="images/dio.png"
-                            alt=""
-                            class="img-circle img-fluid"
-                          />
-                        </div>
-                      </div>
-                      <div class="bottom text-center">
-                        <div class="emphasis">
-                          <button type="button" class="btn btn-success btn-sm">
-                            <i class="fa fa-trash"></i> Xoá User
-                          </button>
-                          <button type="button" class="btn btn-primary btn-sm" onclick="window.location.href='profile.html';">
-                            <i class="fa fa-user"></i> View Profile
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-4 col-sm-4 profile_details">
-                    <div class="well profile_view">
-                      <div class="col-sm-12">
-                        <h4 class="brief"><i>User đã đăng ký</i></h4>
-                        <div class="left col-sm-7">
-                          <h2>Le duy khanh</h2>
-                          <p><strong>About: </strong> Người đọc blog</p>
-                          <ul class="list-unstyled">
-                            <li><i class="fa fa-building"></i> Address:</li>
-                            <li><i class="fa fa-phone"></i> Phone #:</li>
-                          </ul>
-                        </div>
-                        <div class="right col-sm-5 text-center">
-                          <img
-                            src="images/dio.png"
-                            alt=""
-                            class="img-circle img-fluid"
-                          />
-                        </div>
-                      </div>
-                      <div class="bottom text-center">
-                        <div class="emphasis">
-                          <button type="button" class="btn btn-success btn-sm">
-                            <i class="fa fa-trash"></i> Xoá User
-                          </button>
-                          <button type="button" class="btn btn-primary btn-sm" onclick="window.location.href='profile.html';">
-                            <i class="fa fa-user"></i> View Profile
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <div id="list-user"></div>
           </div>
         </div>
         <!-- /page content -->
@@ -542,6 +429,20 @@
     <!-- <script src="../vendors/validator/validator.js"></script> -->
 
     <!-- Custom Theme Scripts -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+      integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="../build/js/custom.min.js"></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"
+    integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+    <script src="./js/user.js"></script>
+
   </body>
 </html>
