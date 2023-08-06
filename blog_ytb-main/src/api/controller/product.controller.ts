@@ -12,7 +12,6 @@ export async function GetProducts(req: Request, res: Response) {
   const _product = await product
     .find()
     .sort({ ngayTao: -1 })
-    .limit(6)
     .toArray();
   res.status(200).json(
     _product.map((t) => {

@@ -17,7 +17,6 @@ export async function GetPosts(req: Request, res: Response) {
           : { idGroupPost: Number(req.query.idGroup) }
       )
       .sort({ ngayTao: -1 })
-      .limit(6)
       .toArray()
   ).map((t) => {
     return { ...t, hinhAnh: `${fullUrl}${t.hinhAnh}` };

@@ -33,6 +33,7 @@ app.use("/api/login", authencationUser);
 app.use("/api/image", routeImage);
 
 // set port, listen for requests
+// npm run dev
 const PORT = process.env.PORT || 8081;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
