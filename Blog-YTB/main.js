@@ -14,14 +14,19 @@ let dataGroupPost = [];
 const urlApi = "http://localhost:8081";
 let activeGroupPost = 0;
 
-// call 4 function in Init in region Init
+//#region Init
 async function init() {
   await getGroupPost();
   await getPost(0);
+}
+async function initGetProduct() {
   await getProduct();
   await getReview();
 }
 init();
+initGetProduct();
+//#endregion
+
 // end region init
 
 // update content into Dom element when clicking
@@ -50,7 +55,7 @@ function getTotal() {
   totalCart.innerHTML = `$${_total}`;
 }
 
-// update total price and quantify of item in list cart 
+// update total price and quantify of item in list cart
 function onClickCart(id) {
   const product = listProduct.find((t) => t._id == id);
   if (!product) {
