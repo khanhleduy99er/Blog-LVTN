@@ -157,7 +157,7 @@ async function onSubmit() {
     tieuDe: tieuDe,
     noiDung: noiDung,
     hinhAnh: `/images/${selectImage}`,
-    idGroupPost: groupPost,
+    idGroupPost: Number(groupPost),
   };
   await createPost(data);
 }
