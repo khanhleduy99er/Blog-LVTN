@@ -15,6 +15,7 @@ const urlApi = "http://localhost:8081";
 let activeGroupPost = 0;
 
 //#region Init
+//Code mới
 async function init() {
   await getGroupPost();
   await getPost(0);
