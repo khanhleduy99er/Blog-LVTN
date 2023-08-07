@@ -115,7 +115,7 @@ function renderGroupPost(data, ma) {
 function renderPost(data) {
   return `${data
     .map((t) => {
-      const _groupName = dataGroupPost.find((x) => x.ma === t.idGroupPost);
+      const _groupName = dataGroupPost.find((x) => x.ma == t.idGroupPost);
       return `<div class="post-box ${_groupName.ten}">
               <img
                 src="${t.hinhAnh}"
@@ -123,15 +123,15 @@ function renderPost(data) {
                 class="post-img"
               />
               <h2 class="category">#Coding</h2>
-              <a href="./postbox1.html" class="post-title">
+              <a href=${t.urlDetail} class="post-title">
                 ${t.tieuDe}
               </a>
               <span class="post-date">${moment(t.ngayTao).format(
                 "DD-MMM-YYYY"
               )}</span>
-              <p class="post-decription">
+              <span>
                 ${t.noiDung}
-              </p>
+              </span>
               <!-- Profile -->
               <div class="profile">
                 <img
