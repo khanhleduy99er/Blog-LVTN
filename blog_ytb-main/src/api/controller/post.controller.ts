@@ -12,7 +12,7 @@ export async function GetPosts(req: Request, res: Response) {
   const _post = (
     await post
       .find(
-        !req.query.idGroup || Number(req.query.idGroup) === 0
+        !req.query.idGroup || Number(req.query.idGroup) == 0
           ? {}
           : { idGroupPost: Number(req.query.idGroup) }
       )

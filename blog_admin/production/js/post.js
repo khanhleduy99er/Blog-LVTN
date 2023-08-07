@@ -151,6 +151,7 @@ async function onDelete(id) {
 async function onSubmit() {
   const tieuDe = document.getElementById("postTitleInput").value;
   const noiDung = document.getElementById("postContentInput").value;
+  const urlDetail = document.getElementById("urlDetail").value;
   const groupPost = document.getElementById("selectGroupPost").value;
   const selectImage = document.getElementById("selectImage").value;
   const data = {
@@ -158,6 +159,7 @@ async function onSubmit() {
     noiDung: noiDung,
     hinhAnh: `/images/${selectImage}`,
     idGroupPost: Number(groupPost),
+    urlDetail: urlDetail,
   };
   await createPost(data);
 }
