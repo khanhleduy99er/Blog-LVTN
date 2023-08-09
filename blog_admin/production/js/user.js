@@ -1,10 +1,11 @@
-// 
+//
 const token = localStorage.getItem("token");
 if (!token) {
   location.href = "login.html";
 }
 const users = document.getElementById("list-user");
-init()
+init();
+
 async function init() {
   await getUser();
 }
@@ -29,11 +30,13 @@ function renderUser(data) {
                               <h5 class="card-title">${t.hoTen}</h5>
                               <p class="card-text">Email: ${t.email}</p>
                               <p class="card-text">Tài khoản: ${t.taiKhoan}</p>
-                              <p class="card-text">Ngày tạo: ${moment(t.ngayTao ?? new Date()).format(
-                                "DD-MM-YYYY"
-                              )}</p>
+                              <p class="card-text">Ngày tạo: ${moment(
+                                t.ngayTao ?? new Date()
+                              ).format("DD-MM-YYYY")}</p>
 
-                              <a href="#" class="btn btn-danger" onclick="onDelete('${t._id}')">Delete</a>
+                              <a href="#" class="btn btn-danger" onclick="onDelete('${
+                                t._id
+                              }')">Delete</a>
                               </div>
                           </div>
                         </div>`;
@@ -55,10 +58,30 @@ async function getUser() {
     },
   };
 
-  // render User of blog 
+  // render User of blog
   await axios(config)
     .then(function (response) {
       users.innerHTML = renderUser(response.data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
+
+// delete user for Db
+async function onDelete(id) {
+  const config = {
+    method: "delete",
+    url: `http://localhost:8081/api/user?id=${id}`,
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+
+  // render User of blog
+  await axios(config)
+    .then(async function () {
+      await getUser();
     })
     .catch(function (error) {
       console.log(error);
