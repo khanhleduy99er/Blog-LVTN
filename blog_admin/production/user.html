@@ -216,12 +216,12 @@
               <!-- Large modal -->
               <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Thêm User</button>
 
-              <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+              <div id="modalwindow" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                   <div class="modal-content">
 
                     <div class="modal-header">
-                      <h4 class="modal-title" id="myModalLabel">Nhập nội dung của post</h4>
+                      <h4 class="modal-title" id="myModalLabel">Thêm người dùng</h4>
                       <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
                       </button>
                     </div>
@@ -231,58 +231,30 @@
                       <div class="x_content">
 									<br />
 									<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
-
-										<div class="item form-group">
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">First Name <span class="required">*</span>
+                    <div class="item form-group">
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Họ tên: <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
-												<input type="text" id="first-name" required="required" class="form-control ">
+												<input type="text" id="fullName" required="required" class="form-control ">
 											</div>
 										</div>
 										<div class="item form-group">
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Last Name <span class="required">*</span>
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Tài khoản: <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
-												<input type="text" id="last-name" name="last-name" required="required" class="form-control">
-											</div>
-										</div>
-										<div class="item form-group">
-											<label for="user-email" class="col-form-label col-md-3 col-sm-3 label-align">Input your Email:</label>
-											<div class="col-md-6 col-sm-6 ">
-												<input id="user-email" class="form-control" type="text" name="user-email">
-											</div>
-										</div>
-										<div class="item form-group">
-											<label class="col-form-label col-md-3 col-sm-3 label-align">Gender</label>
-											<div class="col-md-6 col-sm-6 ">
-												<div id="gender" class="btn-group" data-toggle="buttons">
-													<label class="btn btn-secondary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-														<input type="radio" name="gender" value="male" class="join-btn"> &nbsp; Nam &nbsp;
-													</label>
-													<label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-														<input type="radio" name="gender" value="female" class="join-btn"> Nữ
-													</label>
-												</div>
+												<input type="text" id="userName" required="required" class="form-control ">
 											</div>
 										</div>
                     <div class="item form-group">
-											<label class="col-form-label col-md-3 col-sm-3 label-align ">Password</label>
+											<label class="col-form-label col-md-3 col-sm-3 label-align ">Mật khẩu: </label>
 											<div class="col-md-6 col-sm-6 ">
-												<input type="password" class="form-control" value="passwordonetwo">
+												<input type="password" id="passWord" class="form-control" value="passwordonetwo">
 											</div>
 										</div>
 										<div class="item form-group">
-											<label class="col-form-label col-md-3 col-sm-3 label-align">Date Of Birth <span class="required">*</span>
-											</label>
+											<label for="user-email" class="col-form-label col-md-3 col-sm-3 label-align">Email:</label>
 											<div class="col-md-6 col-sm-6 ">
-												<input id="birthday" class="date-picker form-control" placeholder="dd-mm-yyyy" type="text" required="required" type="text" onfocus="this.type='date'" onmouseover="this.type='date'" onclick="this.type='date'" onblur="this.type='text'" onmouseout="timeFunctionLong(this)">
-												<script>
-													function timeFunctionLong(input) {
-														setTimeout(function() {
-															input.type = 'text';
-														}, 60000);
-													}
-												</script>
+												<input id="email" class="form-control" type="text" name="user-email">
 											</div>
 										</div>
 										<div class="ln_solid"></div>
@@ -295,7 +267,7 @@
 											<div class="col-md-6 col-sm-6 offset-md-3">
 												<button class="btn btn-primary" type="button">Huỷ</button>
 												<button class="btn btn-primary" type="reset">Reset</button>
-												<button type="submit" class="btn btn-success">Submit</button>
+												<button  class="btn btn-success" onclick="onSubmit()">Submit</button>
 											</div>
 										</div>
 

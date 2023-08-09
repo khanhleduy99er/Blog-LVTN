@@ -87,3 +87,38 @@ async function onDelete(id) {
       console.log(error);
     });
 }
+
+async function createUser(data) {
+  var config = {
+    method: "post",
+    url: "http://localhost:8081/api/user",
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+    },
+    data: data,
+  };
+
+  await axios(config)
+    .then(async function (response) {
+      $("#modalwindow").modal("hide").data("bs.modal", null);
+      await getUser();
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
+
+async function onSubmit() {
+  const fullName = document.getElementById("fullName").value;
+  const userName = document.getElementById("userName").value;
+  const passWord = document.getElementById("passWord").value;
+  const email = document.getElementById("email").value;
+  const data = {
+    taiKhoan: userName,
+    matKhau: passWord,
+    hoTen: fullName,
+    email: email,
+  };
+  await createUser(data);
+}
