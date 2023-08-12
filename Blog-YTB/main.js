@@ -49,12 +49,12 @@ function updateCartProduct(id) {
 }
 
 // update price of item in list cart
-function getTotal() {
-  const _total = listCardProduct
-    .map((t) => t.gia * t.amount)
-    .reduce((pre, current) => pre + current, 0);
-  totalCart.innerHTML = `$${_total}`;
-}
+// function getTotal() {
+//   const _total = listCardProduct
+//     .map((t) => t.gia * t.amount)
+//     .reduce((pre, current) => pre + current, 0);
+//   totalCart.innerHTML = `$${_total}`;
+// }
 
 // update total price and quantify of item in list cart
 function onClickCart(id) {
@@ -82,7 +82,7 @@ function renderCartProduct(data) {
       return `<div>
       <div class="cart-item-product">
       ${t.ten}: <span style="float: right;display: flex;
-      align-items: center;"><span>${t.gia}</span>&nbsp x  &nbsp
+      align-items: center;"><span>${t.numFavorite}</span>&nbsp x  &nbsp
       <input
         type="number"
         id="quantity"
@@ -142,19 +142,21 @@ function renderPost(data) {
                 <span class="profile-name">khanhleduy99er</span>
               </div>
             </div>`;
+      console.log(t.hinhAnh);
     })
     .join("")}`;
 }
 
-// render item product for sale in HTMl
+// render item product hot favorite in HTML
 function renderProduct(data) {
   return `${data
     .map((t) => {
       return `<div class="product-box">
               <img src="${t.hinhAnh}" alt="#" class="product-img" />
               <h2 class="product-title">${t.ten}</h2>
-              <span class="price-product">$ ${t.gia}</span>
-              <i class="fa-sharp fa-solid fa-cart-shopping add-cart"></i>
+              <span class="favorite-product"><i class="fa-regular fa-thumbs-up"></i> ${t.numFavorite}</span>
+              <!-- Login BTN -->
+              <a href="./login.html" class="post-detail-product">View-post</a>
             </div>`;
     })
     .join("")}`;
