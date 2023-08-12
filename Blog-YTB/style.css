@@ -878,7 +878,7 @@ i {
   display: inline-block;
   padding: 0.7rem 1.2rem;
   border-radius: 10px;
-  margin-top: 2.2rem;
+  margin-top: 1.2rem;
 }
 .box-login-gmail a {
   color: var(--bg-color);
@@ -890,7 +890,7 @@ i {
   transition: 0.2s;
 }
 .box-btn-back {
-  margin-top: 0.8rem;
+  margin-top: 1.5rem;
   font-style: italic;
   text-decoration: underline;
   font-weight: 300;
@@ -915,7 +915,7 @@ header {
 }
 
 p {
-  color: white;
+  color: var(--text-color);
   font-size: 1rem;
 }
 /* slide bar */

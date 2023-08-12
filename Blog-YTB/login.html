@@ -33,19 +33,19 @@
                     <input type="text" class="input-name" placeholder="Name">
                 </div>
                 <div class="input-account">
-                    <input type="text" class="input-email" placeholder="Email">
+                    <input type="text" class="input-email" placeholder="User name">
                 </div>
                 <div class="input-account">
-                    <input type="text" class="input-password" placeholder="Password" required>
+                    <input type="password" class="input-password" placeholder="Password" required>
                 </div>
             </div>
             <div class="box-register">
-                <p>You don't have account !
+                <p>
                     <span>
                     <a href="./register.html">Created new account</a></span></p>
             </div>
             <div class="box-login-gmail">
-                <a href="#">Log-in</a>
+                <a href="./index.html" onclick="onLogin()">Log-in</a>
             </div>
             <div class="box-btn-back">
                 <a href="./index.html">Back to Page</a>
@@ -69,31 +69,12 @@
                         <input type="password" class="input-password" placeholder="Password" required>
                     </div>
                     <div class="box-btn-submit">
-                        <button type="submit">Register</button>
+                        <button type="submit" onclick="onSubmit()">Register</button>
                     </div>
                 </form>
             </div>
         </div>
     </section>
-    <!-- Sript show UI from register -->
-    <script>
-        var modal = document.getElementById("registerModal");
-        var btn = document.querySelector(".box-register a");
-        var span = document.getElementsByClassName("close")[0];
-    
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-    
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-    
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
+ 
 </body>
 </html>
