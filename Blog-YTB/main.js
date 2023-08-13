@@ -156,7 +156,7 @@ function renderProduct(data) {
               <h2 class="product-title">${t.ten}</h2>
               <span class="favorite-product"><i class="fa-regular fa-thumbs-up"></i> ${t.numFavorite}</span>
               <!-- Login BTN -->
-              <a href="./login.html" class="post-detail-product">View-post</a>
+              <a href="${t.path}" class="post-detail-product">View-post</a>
             </div>`;
     })
     .join("")}`;

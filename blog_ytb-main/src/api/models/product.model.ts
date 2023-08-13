@@ -5,6 +5,7 @@ export interface Product {
   ten: string;
   numFavorite: number;
   hinhAnh: string;
+  path: string;
   ngayTao: Date;
   nguoiTao: string;
   ngayCapNhat: Date;

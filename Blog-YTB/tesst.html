@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Blog với Comment và Avatar</title>
+    <style>
+        /* style.css */
+
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+section {
+    padding: 2em;
+}
+
+article {
+    border: 1px solid #ddd;
+    padding: 1em;
+    margin-bottom: 1em;
+    background-color: #f9f9f9;
+}
+
+textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 0.5em;
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 1em;
+}
+
+.comment-content {
+    flex: 1;
+}
+
+.comment-content p {
+    margin: 0;
+}
+
+.comment-content p::before {
+    content: '📝 ';
+    font-size: 0.8em;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Chia sẻ kiến thức về Ecommerce ở Việt Nam</h1>
+    </header>
+
+    <section>
+        <article>
+            <h2>Ecommerce ở Việt Nam: Cơ hội và thách thức</h2>
+            <p>
+                Trong những năm gần đây, Ecommerce ở Việt Nam đã có sự phát triển mạnh mẽ...
+            </p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Bình luận</h2>
+        <div>
+            <label for="comment-input">Bình luận của bạn:</label>
+            <textarea id="comment-input" rows="4" cols="50"></textarea>
+        </div>
+        <button onclick="addComment()">Gửi Bình Luận</button>
+    </section>
+
+    <section>
+        <h2>Danh sách bình luận</h2>
+        <ul id="comment-list">
+            <!-- Bình luận sẽ được hiển thị ở đây -->
+        </ul>
+    </section>
+
+    <script>
+        function addComment() {
+            const commentInput = document.getElementById('comment-input');
+            const commentText = commentInput.value.trim();
+
+            if (commentText !== '') {
+                const commentList = document.getElementById('comment-list');
+                const newComment = document.createElement('li');
+                
+                // Thêm avatar mặc định của người dùng
+                const avatar = document.createElement('img');
+                avatar.src = 'default-avatar.png';
+                avatar.alt = 'Avatar';
+                avatar.classList.add('avatar');
+                newComment.appendChild(avatar);
+                
+                const commentContent = document.createElement('div');
+                commentContent.classList.add('comment-content');
+                
+                const commentTextElement = document.createElement('p');
+                commentTextElement.textContent = commentText;
+                commentContent.appendChild(commentTextElement);
+
+                newComment.appendChild(commentContent);
+
+                commentList.appendChild(newComment);
+
+                // Lưu comment vào Local Storage
+                const comments = JSON.parse(localStorage.getItem('comments')) || [];
+                comments.push(commentText);
+                localStorage.setItem('comments', JSON.stringify(comments));
+
+                commentInput.value = '';
+            }
+        }
+
+        // Hiển thị các comment đã lưu khi tải lại trang
+        document.addEventListener('DOMContentLoaded', function() {
+            const comments = JSON.parse(localStorage.getItem('comments')) || [];
+            const commentList = document.getElementById('comment-list');
+            comments.forEach(function(commentText) {
+                const newComment = document.createElement('li');
+
+                // Thêm avatar mặc định của người dùng
+                const avatar = document.createElement('img');
+                avatar.src = 'default-avatar.png';
+                avatar.alt = 'Avatar';
+                avatar.classList.add('avatar');
+                newComment.appendChild(avatar);
+
+                const commentContent = document.createElement('div');
+                commentContent.classList.add('comment-content');
+
+                const commentTextElement = document.createElement('p');
+                commentTextElement.textContent = commentText;
+                commentContent.appendChild(commentTextElement);
+
+                newComment.appendChild(commentContent);
+
+                commentList.appendChild(newComment);
+            });
+        });
+    </script>
+</body>
+</html>
