@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post Page</title>
+    <title>Chia sẻ kiến thức về GitHub</title>
     <!-- Link GOOGLE Font -->
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;500&family=Poppins:wght@400;500;600;700&family=Roboto+Flex:opsz,wght@8..144,100;8..144,500&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
     <!-- Link CSS -->
@@ -19,12 +19,8 @@
         <div id="heading">
             <!-- Logo -->
             <a href="./index.html" class="logo">Du.<span>Khanh</span></a>
-            <h3 class="nav-slogan">Cau slogan of this page</h3>
+            <h3 class="nav-slogan">"GitHub giúp kết nối và đồng hành cùng các nhà phát triển trên khắp thế giới, tạo ra một cộng đồng sáng tạo và phát triển phần mềm mạnh mẽ.</h3>
             <div class="right-heading">
-                <div>
-                    <!-- Icon search -->
-                    <i class="cart-icon fa-solid fa-cart-shopping"></i>
-                </div>
                 <div>
                     <!-- Login BTN -->
                     <a href="#" class="login">Log in</a>
@@ -78,8 +74,20 @@
                     - Code không giới hạn khoảng cách giữa các thành viên trong team, bạn có thể làm  <br>việc ở bất cứ đâu vì chỉ cần clone mã nguồn từ kho chứa hoặc clone một phiên bản thay đổi nào đó từ kho chứa, hoặc một nhánh nào đó từ kho chứa. <br>
                     - Dễ dàng trong việc deployment sản phẩm. <br>
                     <br>
+                    <img src="./img/post-box1/git.jpg" class="content-img">
+                    <br>
+                    GitHub giúp kết nối và đồng hành cùng các nhà phát triển trên khắp thế giới, tạo ra một cộng đồng sáng tạo và phát triển phần mềm mạnh mẽ. Với GitHub, nhà phát triển có thể chia sẻ mã nguồn, làm việc nhóm, kiểm tra và xem xét mã nguồn, tạo ra các phiên bản và quản lý dự án một cách hiệu quả. Điều này tạo ra một môi trường phát triển mở, khuyến khích sự hợp tác và tăng cường chất lượng và tốc độ phát triển phần mềm. GitHub không chỉ là một nền tảng quản lý mã nguồn, mà còn là một cộng đồng mạnh mẽ và một công cụ tuyệt vời để xây dựng và chia sẻ các dự án phần mềm đáng ngạc nhiên.
                 </p>
             </div>
+
+            <!-- Chức năng Like bài viết -->
+    <div class="box-like">
+        <button id="like-button" class="like-button" onclick="likePost()">
+          <i class="fa-solid fa-heart"></i> Thích
+        </button>
+        <span id="like-count" class="like-count"></span>
+      </div>
+
             <!-- <div class="box-price">
                 <div class="box-img-price">
                     <img src="https://i.pinimg.com/564x/59/62/5e/59625e482a3ffc03ad73f64a7f93f4ad.jpg" alt="Cake">
@@ -131,5 +139,6 @@
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <!-- Js -->
     <script src="/Blog-YTB/main.js"></script>
+    <script src="js/useful.js"></script>
 </body>
 </html>

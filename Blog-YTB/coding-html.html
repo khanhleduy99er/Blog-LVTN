@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>HTML là gì ?</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post Page</title>
@@ -19,12 +20,8 @@
         <div id="heading">
             <!-- Logo -->
             <a href="./index.html" class="logo">Du.<span>Khanh</span></a>
-            <h3 class="nav-slogan">Cau slogan of this page</h3>
+            <h3 class="nav-slogan">Chia sẻ kiến thức về HTML (Hyper text make-up language)</h3>
             <div class="right-heading">
-                <div>
-                    <!-- Icon search -->
-                    <i class="cart-icon fa-solid fa-cart-shopping"></i>
-                </div>
                 <div>
                     <!-- Login BTN -->
                     <a href="#" class="login">Log in</a>
@@ -54,9 +51,9 @@
             </div>
             <div class="box-user">
                 <i class="fa-solid fa-user"></i>
-                <span>Tao là Lý tiểu long</span>
+                <span>Lý tiểu long</span>
             </div>
-            <h2 class="title-post">What is HTML-Hypertext Markup Language ?</h2>
+            <h2 class="title-post">HTML ngôn ngữ siêu văn bản</h2>
             <img src="./img/post-box7/box1-1.jfif" class="content-img">
             <div class="box-content-post">
                 <p>HTML tạm dịch là ngôn ngữ đánh dấu siêu văn bản. Người ta thường sử dụng HTML trong việc phân chia các đoạn văn, heading, links, blockquotes,…
@@ -133,6 +130,13 @@
                 </p>
             </div>
 
+            <!-- Chức năng Like bài viết -->
+        <div class="box-like">
+            <button id="like-button" class="like-button" onclick="likePost()">
+              <i class="fa-solid fa-heart"></i> Thích
+            </button>
+            <span id="like-count" class="like-count"></span>
+          </div>
 
             <div class="box-price">
             </div>
@@ -163,28 +167,12 @@
     </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- Link Front Awesome -->
     <script src="https://kit.fontawesome.com/a714f771f9.js" crossorigin="anonymous"></script>
     <!-- JQuery Link -->
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <!-- Js -->
     <script src="/Blog-YTB/main.js"></script>
+    <script src="js/useful.js"></script>
 </body>
 </html>

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>CSS flexbox</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post Page</title>
@@ -19,15 +20,11 @@
         <div id="heading">
             <!-- Logo -->
             <a href="./index.html" class="logo">Du.<span>Khanh</span></a>
-            <h3 class="nav-slogan">Cau slogan of this page</h3>
+            <h3 class="nav-slogan">CSS flexbox là một kỹ thuật quan trọng để điều chỉnh bố cục khi sử dụng CSS</h3>
             <div class="right-heading">
                 <div>
-                    <!-- Icon search -->
-                    <i class="cart-icon fa-solid fa-cart-shopping"></i>
-                </div>
-                <div>
                     <!-- Login BTN -->
-                    <a href="#" class="login">Log in</a>
+                    <a href="#" class="login">Đăng nhập</a>
                 </div>
             </div>
             
@@ -110,7 +107,14 @@
             <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"> CSS tricks</a><br>
             <a href="https://viblo.asia/p/huong-dan-day-du-ve-css-flexbox-maGK7J9a5j2">Viblo</a><br>
             <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Mozilla.org</a><br>     
-
+            
+            <!-- Chức năng Like bài viết -->
+        <div class="box-like">
+            <button id="like-button" class="like-button" onclick="likePost()">
+              <i class="fa-solid fa-heart"></i> Thích
+            </button>
+            <span id="like-count" class="like-count"></span>
+          </div>
 
 
             <div class="box-content-post">
@@ -146,27 +150,12 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- Link Front Awesome -->
     <script src="https://kit.fontawesome.com/a714f771f9.js" crossorigin="anonymous"></script>
     <!-- JQuery Link -->
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <!-- Js -->
     <script src="/Blog-YTB/main.js"></script>
+    <script src="js/useful.js"></script>
 </body>
 </html>

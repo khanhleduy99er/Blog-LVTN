@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>APPLE PENCIL</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post Page</title>
@@ -19,7 +20,7 @@
         <div id="heading">
             <!-- Logo -->
             <a href="./index.html" class="logo">Du.<span>Khanh</span></a>
-            <h3 class="nav-slogan">Cau slogan of this page</h3>
+            <h3 class="nav-slogan">Apple pencil mang đến cho bạn cảm giác vẽ chân thực !</h3>
             <div class="right-heading">
                 <div>
                     <!-- Icon search -->
@@ -108,7 +109,15 @@
                     <br>
                 </p>
             </div>
-             
+            
+            <!-- Chức năng Like bài viết -->
+        <div class="box-like">
+            <button id="like-button" class="like-button" onclick="likePost()">
+              <i class="fa-solid fa-heart"></i> Thích
+            </button>
+            <span id="like-count" class="like-count"></span>
+          </div>
+
             <!-- Disable box-price -->
             <!-- <div class="box-price">
                 <div class="box-img-price">
@@ -158,28 +167,12 @@
     </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- Link Front Awesome -->
     <script src="https://kit.fontawesome.com/a714f771f9.js" crossorigin="anonymous"></script>
     <!-- JQuery Link -->
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <!-- Js -->
     <script src="/Blog-YTB/main.js"></script>
+    <script src="js/useful.js"></script>
 </body>
 </html>
