@@ -87,7 +87,6 @@ li {
 }
 
 .comment-content p::before {
-    content: '📝 ';
     font-size: 0.8em;
 }
 
@@ -139,7 +138,7 @@ h2 {
                 
                 // Thêm avatar mặc định của người dùng
                 const avatar = document.createElement('img');
-                avatar.src = 'default-avatar.png';
+                avatar.src = '';
                 avatar.alt = 'Avatar';
                 avatar.classList.add('avatar');
                 newComment.appendChild(avatar);
@@ -173,7 +172,7 @@ h2 {
 
                 // Thêm avatar mặc định của người dùng
                 const avatar = document.createElement('img');
-                avatar.src = 'default-avatar.png';
+                avatar.src = '';
                 avatar.alt = 'Avatar';
                 avatar.classList.add('avatar');
                 newComment.appendChild(avatar);
