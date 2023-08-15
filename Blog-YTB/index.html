@@ -30,15 +30,15 @@
           <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#filter">Post</a>
-          <a href="#container-hot-item">Best Post</a>
-          <!-- <a href="#contact">Contact</a> -->
+          <a href="#container-hot-item">Hot-Item</a>
+          <a href="#contact">Contact</a>
         </nav>
 
         <div class="right-heading">
           <div>
             <!-- Icon shopping -->
             <i
-              class="cart-icon fa-solid fa-heart"
+              class="cart-icon fa-solid fa-cart-shopping"
               id="cart-shopping-icon"
             ></i>
           </div>
@@ -49,16 +49,16 @@
 
           <!-- List cart items -->
           <div class="cart-item">
-            <h2 class="cart-title">List post favorite</h2>
+            <h2 class="cart-title">Your Cart</h2>
 
             <div class="cart-content" id="list-cart"></div>
             <!-- Total items -->
-            <!-- <div class="total-items">
+            <div class="total-items">
               <div class="total-title">Total</div>
               <div class="total-price" id="total-price">$ 0</div>
-            </div> -->
+            </div>
             <!-- Buy button -->
-            <!-- <button type="button" class="btn-buy-total"  id="close-cart-list">Exist</button> -->
+            <button type="button" class="btn-buy-total">Buy Now</button>
             <!-- Cart close -->
             <i class="fa-solid fa-circle-xmark" id="close-cart-list"></i>
           </div>
@@ -114,7 +114,7 @@
 
     <!-- Hot items -->
     <section id="container-hot-item">
-      <h3 class="item-title">Best Post Favorite</h3>
+      <h3 class="item-title">Hot Items of Us</h3>
       <!-- Content -->
       <div class="shop-content" id="list-product"></div>
     </section>
@@ -135,21 +135,21 @@
           <h3 class="contact-title-input">Feed back for US</h3>
           <div class="input-info">
             <span><i class="fa-solid fa-circle-user"> </i></span>
-            <input type="text" placeholder="Type your Name" />
+            <input id="name" type="text" placeholder="Type your Name" />
           </div>
           <div class="input-info">
             <span><i class="fa-solid fa-envelope"></i> </span>
-            <input type="text" placeholder="Type your Email" />
+            <input id="email" type="text" placeholder="Type your Email" />
           </div>
           <div class="input-info">
             <span><i class="fa-solid fa-phone"></i></span>
-            <input type="number" placeholder="Type your Phone number" />
+            <input  id="phone" type="number" placeholder="Type your Phone number" />
           </div>
           <div class="input-info">
             <span><i class="fa-solid fa-comment"></i></span>
-            <textarea placeholder="Type your Feedback"></textarea>
+            <textarea id="content" placeholder="Type your Feedback"></textarea>
           </div>
-          <a href="#" class="contact-btn">Send</a>
+          <button onclick="onSubmitFeedback()" class="contact-btn">Send</button>
         </div>
       </div>
     </section>
