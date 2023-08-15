@@ -22,7 +22,6 @@ async function init() {
 }
 async function initGetProduct() {
   await getProduct();
-  await getReview();
 }
 init();
 initGetProduct();
@@ -380,4 +379,41 @@ function removeClass(element, name) {
     }
   }
   element.className = arr1.join(" ");
+}
+async function createReview(data) {
+  var config = {
+    method: "post",
+    url: "http://localhost:8081/api/review-us",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    data: data,
+  };
+
+  await axios(config)
+    .then(async function (response) {
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("phone").value = "";
+      document.getElementById("content").value = "";
+      alert("Gửi feedback thành công");
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
+
+async function onSubmitFeedback() {
+  console.log(1);
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+  const content = document.getElementById("content").value;
+  const data = {
+    ten: name,
+    email: email,
+    soDienThoai: phone,
+    noiDung: content,
+  };
+  await createReview(data);
 }

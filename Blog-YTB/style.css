@@ -576,10 +576,10 @@ i {
   padding: 0.4rem 1rem;
   background: var(--seccond-color);
   border-radius: 4px;
-  display: inline-block;
   margin-left: 45%;
   color: white;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 /* Footer */
