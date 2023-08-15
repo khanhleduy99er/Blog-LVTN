@@ -128,9 +128,9 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Feedback từ User</h3>
+                <h3>Quản lí Feedback Users</h3>
               </div>
-
+              
               <div class="title_right">
                 <div class="col-md-5 col-sm-5 form-group pull-right top_search">
                   <div class="input-group">
@@ -146,234 +146,21 @@
                 </div>
               </div>
             </div>
+
+
+            <!-- Large Modal -->
+            <!-- <div class="x_content"> -->
+
+              <!-- modals -->
+              <!-- Large modal -->
+              <div  id="list-feedback"></div>
+       
+            <!-- end large model -->
             <div class="clearfix"></div>
 
-            <!-- Feedback 1 -->
-            <div class="row">
-              <div class="col-md-12 col-sm-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Nội dung phản hồi </h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li>
-                        <a class="collapse-link"
-                          ><i class="fa fa-chevron-up"></i
-                        ></a>
-                      </li>
-                      <li class="dropdown">
-                        <a
-                          href="#"
-                          class="dropdown-toggle"
-                          data-toggle="dropdown"
-                          role="button"
-                          aria-expanded="false"
-                          ><i class="fa fa-wrench"></i
-                        ></a>
-                        <div
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownMenuButton"
-                        >
-                          <a class="dropdown-item" href="#">Settings 1</a>
-                          <a class="dropdown-item" href="#">Settings 2</a>
-                        </div>
-                      </li>
-                      <li>
-                        <a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-
-                  <div id="feedback-display">
-                    <h3>Nội dung</h3>
-                    <p>
-                      <strong>Name:</strong> <span id="display-name"></span>nội
-                      dung feedback được gửi từ trang web
-                    </p>
-                    <p>
-                      <strong>Email:</strong>
-                      <span id="display-email"></span>nội dung feedback được gửi
-                      từ trang web
-                    </p>
-                    <p>
-                      <strong>Phone Number:</strong>
-                      <span id="display-phone"></span>nội dung feedback được gửi
-                      từ trang web
-                    </p>
-                    <p>
-                      <strong>Feedback:</strong>
-                      <span id="display-feedback"></span>Lorem ipsum dolor sit
-                      amet consectetur, adipisicing elit. Vel iusto est velit?
-                      Doloremque ex quia, ad dolor temporibus quae eum explicabo
-                      praesentium perferendis neque labore rem, assumenda
-                      corrupti quisquam distinctio. Lorem ipsum dolor sit amet
-                      consectetur, adipisicing elit. Facilis aspernatur tenetur
-                      deserunt, delectus voluptatibus saepe. Deserunt sit dolor
-                      laudantium ipsam, magnam veniam possimus et cupiditate
-                      quisquam quaerat, blanditiis, qui quae. Lorem, ipsum dolor
-                      sit amet consectetur adipisicing elit. Numquam eligendi,
-                      voluptas minima ipsa quod eum beatae. Dolor maiores quis
-                      itaque quas, saepe magni minima ea libero, deserunt quasi
-                      molestias quos.
-                    </p>
-                  </div>
-                  <!-- CSS forms -->
-                  <style>
-                    #feedback-display {
-                      margin-top: 20px;
-                      padding: 20px;
-                      background-color: #f8f8f8;
-                      border: 1px solid #ccc;
-                    }
-
-                    #feedback-display h3 {
-                      margin-bottom: 10px;
-                      font-size: 20px;
-                    }
-
-                    #feedback-display p {
-                      margin-bottom: 5px;
-                    }
-
-                    #feedback-display strong {
-                      font-weight: bold;
-                    }
-
-                    #feedback-display span {
-                      font-weight: normal;
-                    }
-                  </style>
-
-                  <script>
-                    document
-                      .getElementById("feedback-form")
-                      .addEventListener("submit", function (event) {
-                        event.preventDefault(); // Prevents the default form submission
-
-                        // Get the form input values
-                        var name = document.getElementById("name").value;
-                        var email = document.getElementById("email").value;
-                        var phone = document.getElementById("phone").value;
-                        var feedback =
-                          document.getElementById("feedback").value;
-
-                        // Update the feedback display with the received information
-                        document.getElementById("display-name").textContent =
-                          name;
-                        document.getElementById("display-email").textContent =
-                          email;
-                        document.getElementById("display-phone").textContent =
-                          phone;
-                        document.getElementById(
-                          "display-feedback"
-                        ).textContent = feedback;
-
-                        // Show the feedback display and hide the form
-                        document.getElementById("feedback-form").style.display =
-                          "none";
-                        document.getElementById(
-                          "feedback-display"
-                        ).style.display = "block";
-                      });
-                  </script>
-
-                  <div class="x_content">
-                    <form class="" action="" method="post" novalidate>
-                      <span class="section">Phản hồi User</span>
-                      <div class="field item form-group">
-                        <label
-                          class="col-form-label col-md-3 col-sm-3 label-align"
-                          >Name<span class="required">*</span></label
-                        >
-                        <div class="col-md-6 col-sm-6">
-                          <input
-                            class="form-control"
-                            data-validate-length-range="6"
-                            data-validate-words="2"
-                            name="name"
-                            placeholder="ex. John f. Kennedy"
-                            required="required"
-                          />
-                        </div>
-                      </div>
-                      <div class="field item form-group">
-                        <label
-                          class="col-form-label col-md-3 col-sm-3 label-align"
-                          >Email<span class="required">*</span></label
-                        >
-                        <div class="col-md-6 col-sm-6">
-                          <input
-                            class="form-control"
-                            name="email"
-                            class="email"
-                            required="required"
-                            type="email"
-                          />
-                        </div>
-                      </div>
-                      <div class="field item form-group">
-                        <label
-                          class="col-form-label col-md-3 col-sm-3 label-align"
-                          >Number <span class="required">*</span></label
-                        >
-                        <div class="col-md-6 col-sm-6">
-                          <input
-                            class="form-control"
-                            type="number"
-                            class="number"
-                            name="number"
-                            data-validate-minmax="10,100"
-                            required="required"
-                          />
-                        </div>
-                      </div>
-                      <div class="field item form-group">
-                        <label
-                          class="col-form-label col-md-3 col-sm-3 label-align"
-                          >Date<span class="required">*</span></label
-                        >
-                        <div class="col-md-6 col-sm-6">
-                          <input
-                            class="form-control"
-                            class="date"
-                            type="date"
-                            name="date"
-                            required="required"
-                          />
-                        </div>
-                      </div>
-                      
-                      <div class="field item form-group">
-                        <label
-                          class="col-form-label col-md-3 col-sm-3 label-align"
-                          >message<span class="required">*</span></label
-                        >
-                        <div class="col-md-6 col-sm-6">
-                          <textarea
-                            required="required"
-                            name="message"
-                          ></textarea>
-                        </div>
-                      </div>
-                      <div class="ln_solid">
-                        <div class="form-group">
-                          <div class="col-md-6 offset-md-3">
-                            <button type="submit" class="btn btn-primary">
-                              Submit
-                            </button>
-                            <button type="reset" class="btn btn-success">
-                              Reset
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
+   
         <!-- End feedback -->
 
         
@@ -457,5 +244,19 @@
 
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"
+    integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+      integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./js/feeback.js"></script>
+
   </body>
 </html>
